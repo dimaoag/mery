@@ -1,0 +1,189 @@
+[2018-08-13 11:43:27] Text error: Class 'app\controllers\Currency' not found | File: /var/www/mery/app/controllers/AppController.php | Line: 16 
+        
+====================='=
+[2018-08-13 11:44:03] Text error: Action app\controllers\MainController::indexAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-13 11:50:04] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:50:04] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:50:30] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:50:31] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:51:42] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:51:42] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:51:47] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:51:48] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:54:31] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:54:32] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:54:40] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 11:54:40] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:00:43] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:00:43] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:01:04] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:01:05] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:01:11] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:01:11] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:01:36] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:01:36] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:01:40] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:01:47] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:01:47] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:02:01] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:02:02] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:02:46] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:02:47] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:11:10] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:11:11] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:11:21] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:11:21] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:13:40] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:13:40] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:13:46] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:13:46] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:14:46] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:14:46] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:16:57] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:16:57] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:17:07] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:17:07] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:19:18] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:19:18] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:19:33] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:19:33] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:19:36] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:19:37] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:20:12] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:20:12] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:20:36] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:20:36] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:22:36] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:22:36] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:23:24] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:23:24] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:24:04] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:24:04] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:29:40] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 12:29:40] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 13:50:35] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-13 13:50:36] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=

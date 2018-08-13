@@ -1,0 +1,123 @@
+@media all and (max-width: 2000px){
+    .programs li{
+        justify-content: start;
+    }
+}
+
+@media all and (max-width: 840px){
+
+    html{
+        font-size: 13px;
+    }
+    .header-logo{
+        min-width: 70px;
+    }
+    .header-logo img{
+        max-width: 100%;
+    }
+
+}
+@media all and (max-width: 900px){
+    .wrapper{
+        overflow: auto;
+    }
+    .content{
+        width: 100%;
+    }
+    .left-sidebar{
+        display: none;
+    }
+    .header-md{
+        display: block;
+        margin-bottom: 25px;
+    }
+    .header-lg{
+        display: none;
+    }
+    .logo-md{
+        max-width: 35px;
+    }
+    .navbar-light .navbar-brand{
+        color: #6d5b97;
+    }
+    a.navbar-brand:hover{
+        color: #6d5b97;;
+    }
+    .auth a{
+        color: black;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: rgba(0,0,0,1);
+    }
+    .dropdown-menu a{
+        color: black;
+    }
+    .slider-btn{
+        display: none;
+    }
+    .horizontal-line .col-4{
+
+    }
+    .horizontal-line-text{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .horizontal-line-text-md{
+        font-size: 1rem;
+    }
+    .rob-nash-title{
+        font-size: 1.3rem;
+    }
+}
+
+@media all and (max-width: 1060px){
+    /* --------------- courses ---------*/
+    .course-little-desc{
+        font-size: 0.9rem;
+    }
+    .courses-cart-info{
+        font-size: 0.8rem;
+    }
+    .video-carousel{
+        /*display: none;*/
+    }
+    .modal-lg {
+        max-width: 100%;
+    }
+}
+@media all and (max-width: 992px){
+    /* --------------- courses ---------*/
+    .courses-banner{
+        display: none;
+    }
+    .course-img{
+        max-width: 400px;
+    }
+    .course-welcome{
+        /*min-height: 320px;*/
+    }
+
+}
+
+@media all and (max-width: 600px){
+    /* --------------- course ---------*/
+    .course-img{
+        max-height: 300px;
+    }
+    .owl-carousel .owl-item{
+        display: flex;
+        justify-content: center;
+    }
+    .text-image-center h2{
+        font-size: 1.1rem;
+    }
+    .modal-lg {
+        max-width: 100%;
+    }
+    .modal-btn-text{
+        display: none;
+    }
+    .table-item-delete{
+        display: none;
+    }
+}

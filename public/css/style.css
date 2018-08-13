@@ -1,0 +1,634 @@
+/* --------------- базовые настройки ---------*/
+
+html {
+    font-family: 'Open Sans', Arial, sans-serif;
+    min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+    font-size: 16px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*color: #606060;*/
+    text-align: left;
+    font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+    min-height:100%;
+    background-color: #ffffff;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+    color: #5b5a5a;
+    text-decoration: none;
+
+
+}
+a:hover {
+    color: #6d5b97;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+a:focus, a:active {
+    color: black;
+    text-decoration: none;
+
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight:normal;
+}
+img{
+
+    max-width:100%;
+}
+.clr{
+    clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+li, ol{
+    list-style: none;
+}
+
+input[type=text], textarea {outline:none;}
+
+/* --------------- /базовые настройки ---------*/
+
+/* --------------- grid ---------*/
+.wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.site-grid{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.left-sidebar{
+    position: relative;
+    width: 300px;
+}
+
+/* --------------- menu ---------*/
+.navbar a{
+    color: white;
+}
+.navbar a:hover{
+    color: black;
+}
+.sidebar{
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    z-index: 5;
+    background-color: white;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.logo img{
+    max-width: 100px;
+}
+.dws-menu{
+    width: 250px;
+}
+.dws-menu h1{
+    font-size: 1rem;
+    margin-left: 20px;
+}
+.dws-menu > ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 10px;
+}
+.dws-menu > ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+.dws-menu > ul li ul{
+    position: absolute;
+    top: 20%;
+    left: 100%;
+    padding: 0;
+    width: 300px;
+}
+.dws-menu > ul li ul li a{
+    padding: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.dws-menu > ul li a:hover{
+    transition: all 0.3s ease;
+}
+.dws-menu li ul{
+    position: absolute;
+    min-width: 150px;
+    left: 250px;
+    top: 0;
+    background-color: white;
+    display: none;
+}
+.dws-menu li:hover > ul {
+    display: block;
+    z-index: 6;
+}
+.toggleMenu{
+    display: none;
+}
+/* --------------- header-content ---------*/
+.content{
+    width: 70%;
+}
+.header-lg{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.header-md{
+    display: none;
+}
+.header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.header-flex-item{
+    flex: 1 200px;
+    display: flex;
+    justify-content: center;
+}
+.header-flex-item-2{
+    flex-grow: 2;
+}
+
+.search{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.search_field{
+    border: none;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    border-bottom: 2px solid darkgrey;
+}
+form.search-form{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.search_btn{
+    border:0;
+    width: 32px;
+    height: 32px;
+    background: url('../images/searchicon.png') no-repeat center center;
+    cursor:pointer;
+}
+.auth{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.header-flex-item-3{
+    justify-content: flex-end;
+}
+.signup{
+    margin-right: 2%;
+}
+.login{
+    margin-left: 2%;
+}
+.auth i{
+    font-size: 1.5rem;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+/* --------------- index slider ---------*/
+.slider{
+    max-width: 730px;
+    margin-bottom: 30px;
+    position: relative;
+}
+a.btn.slider-btn{
+    background-color: #6d5b97;
+    color: white;
+    width: 35%;
+    position: absolute;
+    top: -100%;
+    right: 0;
+}
+a.btn.slider-btn:hover{
+    font-weight: normal;
+}
+/* --------------- index-programs ---------*/
+.programs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.programs-title{
+    font-size: 1.3rem;
+    color: #6d5b97;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.programs ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 10px;
+}
+.programs li:first-child{
+    border-top: 1px solid #d8d8d8;
+}
+.programs li{
+    position: relative;
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+.programs li a:hover{
+    cursor: pointer;
+}
+.programs ul li .programs-text{
+    display: block;
+    padding-left: 10px;
+    line-height: 5px;
+    width: 100%;
+}
+.programs ul li .programs-date{
+    text-align: center;
+    color: #6d5b97;
+}
+.programs ul li .programs-date h4{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.programs ul li h5{
+    white-space: nowrap;
+    font-size: 1rem;
+}
+.programs-show-all{
+    white-space: nowrap;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #6d5b97;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+}
+.programs-show-all:hover{
+    color: white;
+}
+/* --------------- horizontal-line ---------*/
+.horizontal-line{
+    margin: 50px 0 50px 0;
+}
+.horizontal-line .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.horizontal-line-left, .horizontal-line-right{
+    width: 100%;
+    height: 10px;
+    border-top: 1px dashed #6d5b97;
+    border-bottom: 1px dashed #6d5b97;
+}
+.horizontal-line-text{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #6d5b97;
+}
+article{
+    margin: 20px 0 20px 0;
+}
+/* --------------- index-cart ---------*/
+.index-card-title{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.index-card-body{
+    padding: 5px;
+}
+.fa-comment{
+    color: #c4aef6;
+}
+.fa-heart{
+    color: #ff9d9d;
+}
+/* --------------- index-video ---------*/
+.video-item{
+    max-width: 350px;
+}
+.all-video{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: #6d5b97;
+    font-size: 1rem;
+}
+/* --------------- index-reviews ---------*/
+.reviews{
+    text-align: center;
+    position: relative;
+    border: 1px solid #d8d8d8;
+}
+.owl-nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.owl-dots{
+    width: 100%;
+    text-align: center;
+}
+.owl-carousel button.owl-dot{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 5px;
+}
+.owl-carousel button.active{
+    background-color: #6d5b97;
+}
+
+.review-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    max-width: 100px;
+}
+.review-name{
+    font-weight: bold;
+    padding: 20px;
+}
+
+.review-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.owl-carousel .owl-nav button{
+    min-width: 30%;
+    outline: none;
+}
+.owl-carousel .owl-nav button span:hover{
+    cursor: pointer;
+}
+.owl-carousel .owl-nav button.owl-prev span{
+    display: block;
+    font-size: 3rem;
+}
+.owl-carousel .owl-nav button.owl-next span{
+    display: block;
+    font-size: 3rem;
+}
+.reviews-container{
+    margin-bottom: 50px;
+}
+/* --------------- index-map ---------*/
+.map{
+    width: 100%;
+    height: 400px;
+}
+/* --------------- index-footer ---------*/
+.footer{
+    padding: 20px;
+    background-color: #6d5b97;
+    color: white;
+}
+.footer-poss{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    min-width: 250px;
+}
+.phones p, .email p, .address p{
+    white-space: nowrap;
+    margin: 0;
+}
+.phone-icon, .email-icon{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.soc a{
+    font-size: 1.5rem;
+    color: white;
+    padding: 0 10px 0 10px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-item{
+    min-width: 190px;
+}
+
+
+/* --------------- courser ---------*/
+.coursers-card{
+    margin: 10px 0 10px 0;
+}
+.coursers-card-title{
+    color: #6d5b97;
+    font-size: 1.4rem;
+}
+.course-little-desc{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.course-price{
+    color: #6d5b97;
+    font-size: 1.8rem;
+}
+.course-btn{
+    color: white;
+    outline: none;
+    border: none;
+}
+.course-btn:hover{
+    cursor: pointer;
+}
+.course-btn:focus{
+    outline: none;
+}
+a.courses-all-courses, .courses-all-courses:hover{
+    color: #6d5b97;
+    text-decoration: underline;
+}
+
+
+/* --------------- reviews ---------*/
+.page-reviews-reviews{
+    border-bottom: 1px solid #d8d8d8;
+    padding-top: 1rem;
+}
+.page-reviews-reviews:first-child{
+    border-top: 1px solid #d8d8d8;
+}
+.send-review{
+    border:0;
+    width: 52px;
+    height: 52px;
+    background: url('../images/fly.png') no-repeat center center;
+    cursor:pointer;
+}
+.page-reviews-reviews img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 7px;
+}
+.review-field::placeholder{
+    /*font-size: 1rem;*/
+    color: rgba(0,0,0,.3);
+}
+
+/* --------------- login ---------*/
+.login100-form-title{
+    text-transform: uppercase;
+    color: #6d5b97;
+    font-size: 2rem;
+}
+/* --------------- course ---------*/
+.rob-nash-title{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    white-space: normal;
+}
+.course-img, .nearest{
+    margin: 0 10px 0 10px;
+}
+.carousel-course .owl-nav{
+    color: white;
+}
+.course-welcome{
+    height: 100%;
+    width: 100%
+}
+.text-image-center{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: white;
+}
+.text-image-center h2{
+    font-size: 1.5rem;
+    padding: 0 10% 0 10%;
+}
+.text-image-center-btn{
+    text-transform: uppercase;
+    padding: 5px 30px 5px 30px;
+}
+.text-image-center-btn:hover{
+    background-color: rgba(0,0,0,0);
+    color: #6d5b97;
+    border-color: #6d5b97;
+}
+.title-sub-category{
+    display: block;
+    width: 100%;
+    background-color: #6d5b97;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 0 20px 0;
+    font-size: 1.5rem;
+}
+.course-textarea{
+    width:100%;
+    padding: 5px;
+    min-height: 500px;
+    border: none;
+}
+/* width */
+.course-textarea::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+.course-textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+.course-textarea::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+/* Handle on hover */
+.course-textarea::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.course-title{
+    border: 2px solid #888;
+    padding: 15px 0 15px 0;
+}
+.nearest-title{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#carousel {
+    display: block;
+    width:100%;
+    height: 400px;
+}
+#carousel img {
+    max-width: 400px;
+    cursor: pointer; /* not needed if you wrap carousel items in links */
+}
+.modal-lg {
+    max-width: 70%;
+}
+div#exampleModalCenter{
+    padding: 0;!important;
+}
+div.modal-header{
+    border: none;
+}
+.modal-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a.modal-btn{
+    color: white;
+}
+a.modal-btn i{
+    font-size: 1.2rem;
+}
+.modal-btn-text{
+    padding-left: 10px;
+}

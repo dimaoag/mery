@@ -1,0 +1,9 @@
+/.idea
+/.vagrant
+ubuntu-xenial-16.04-cloudimg-console.log
+vendor/*
+!/vendor/mery/
+Vagrantfile
+provision.sh
+composer.lock
+

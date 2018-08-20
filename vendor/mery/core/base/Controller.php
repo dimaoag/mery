@@ -1,7 +1,6 @@
 <?php
 namespace mery\base;
 
-
 abstract class Controller
 {
     public $route;
@@ -45,9 +44,9 @@ abstract class Controller
      * @param string $keywords
      */
     public function setMeta($title = '', $desc = '', $keywords = ''){
-        $this->meta['title'] = htmlSpecialCharsWrapper($title);
-        $this->meta['desc'] = htmlSpecialCharsWrapper($desc);
-        $this->meta['keywords'] = htmlSpecialCharsWrapper($keywords);
+        $this->meta['title'] = h($title);
+        $this->meta['desc'] = h($desc);
+        $this->meta['keywords'] = h($keywords);
     }
 
 

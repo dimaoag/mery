@@ -1,42 +1,41 @@
 <div class="container">
     <div class="row">
         <div class="col-xl-8">
-            <div class="slider">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="#">
-                                <img class="d-block w-100" src="images/111.png" alt="First slide">
-                            </a>
+            <?php if (!empty($carousel)): ?>
+                <div class="slider">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel">
+                            <?php $i = 1;?>
+                            <?php foreach ($carousel as $key => $src): ?>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="<?=$key;?>" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="<?=$key;?>"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="<?=$key;?>"></li>
+                            <?php endforeach; ?>
+                        </ol>
+                        <div class="carousel-inner">
+                            <?php foreach ($carousel as $item): ?>
+                                <div class="carousel-item <?= ($i==1) ? ' active' : '' ?>">
+                                    <a href="/category/<?=$item->category_id;?>">
+                                        <img class="d-block w-100" src="images/<?=$item->src;?>" alt="">
+                                    </a>
+                                </div>
+                            <?php $i++; ?>
+                            <?php endforeach; ?>
                         </div>
-                        <div class="carousel-item">
-                            <a href="#">
-                                <img class="d-block w-100" src="images/111.png" alt="Second slide">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#">
-                                <img class="d-block w-100" src="images/111.png" alt="Third slide">
-                            </a>
-                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                       data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                       data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
         <div class="col-xl-4">
             <div class="programs">

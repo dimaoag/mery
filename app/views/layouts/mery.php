@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,20 @@
     <link rel="stylesheet" href="css/croppie.css">
     <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
     <link rel="stylesheet" href="css/themes/simple.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
 
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/media.css"/>
@@ -43,9 +58,9 @@
                                     <img src="images/logo.png" alt="image">
                                 </a>
                                 <div class="auth">
-                                    <a href="/user/registration" class="signup">Регистрация</a>
+                                    <a href="<?=PATH;?>/user/registration" class="signup">Регистрация</a>
                                     /
-                                    <a href="#" class="login">Вход</a>
+                                    <a href="/user/login" class="login">Вход</a>
                                     <i class="fa fa-user-o" aria-hidden="true"></i>
                                 </div>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,9 +91,9 @@
                                 </div>
                                 <div class="burger header-flex-item header-flex-item-3">
                                     <div class="auth">
-                                        <a href="#" class="signup">Регистрация</a>
+                                        <a href="<?=PATH;?>/user/registration" class="signup">Регистрация</a>
                                         /
-                                        <a href="#" class="login">Вход</a>
+                                        <a href="/user/login" class="login">Вход</a>
                                         <i class="fa fa-user-o" aria-hidden="true"></i>
                                     </div>
                                 </div>
@@ -88,6 +103,29 @@
                 </div>
             </header>
             <main>
+                <?php if (isset($_SESSION['errors'])): ?>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-danger">
+                                    <?php echo $_SESSION['errors']; unset($_SESSION['errors']); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['success'])): ?>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success">
+                                    <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
                 <?= $content; ?>
             </main>
 
@@ -149,6 +187,21 @@
         type="text/javascript"></script>
 <script src="js/croppie.min.js"></script>
 <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+
+<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<!--<script src="vendor/bootstrap/js/bootstrap.min.js"></script>-->
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/daterangepicker/moment.min.js"></script>
+<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+
 <script src="js/script.js"></script>
 
 </body>

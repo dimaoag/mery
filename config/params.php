@@ -1,7 +1,9 @@
 <?php
 return [
     'admin_email' => 'dimaoag@gmail.com',
-    'shop_name' => 'shop2.com',
+    'shop_name' => 'Meri&Meri',
+    'turbo_sms_login' => 'hdfresh',
+    'turbo_sms_password' => '232101',
     'pagination' => 6,
     'smtp_host' => 'smtp.ukr.net',
     'smtp_port' => 2525,

@@ -1,16 +1,43 @@
 <?php
 namespace app\controllers;
 
+use app\models\User;
+use app\widgets\sms\TurboSMS;
 
 class UserController extends AppController {
 
-    public function indexAction(){
-        $this->setMeta('User');
-    }
+
 
     public function registrationAction(){
-        $this->setMeta('');
+        if (!empty($_POST)){
+            $user = new User();
+            $data = $_POST;
+            $data['phone'] = str_replace(" ", "", $data['phone']);
+            $user->load($data);
+            if (!$user->validate($data) || !$user->isUnique()){
+                $user->getErrors();
+                $_SESSION['form_data'] = $data;
+            } else {
+                $user->attributes['phone'] = '+' . $user->attributes['phone'];
+                $user->hashPassword();
+                $user_id = $user->save('user');
+
+//                $turboSMS = new TurboSMS();
+//                if ($turboSMS->send($user->attributes['phone'], '1111')){
+//                    $_SESSION['success'] = 'Success!';
+//                }
+            }
+            redirect();
+        }
+        $this->setMeta('Регистрация');
     }
+
+
+    public function confirmAction(){
+        $this->setMeta('Подтвердите свой телефон');
+
+    }
+
 
     public function uploadPhotoAction(){
         function str_random($length){

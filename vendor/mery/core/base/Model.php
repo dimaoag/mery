@@ -36,7 +36,7 @@ abstract class Model
      */
     public function validate($data){
 //        Validator::langDir();
-//        Validator::lang('ru');
+        Validator::lang('ru');
         $validator = new Validator($data);
         $validator->rules($this->rules);
         if ($validator->validate()){

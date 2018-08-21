@@ -8,7 +8,9 @@ class UserController extends AppController {
         $this->setMeta('User');
     }
 
-
+    public function registrationAction(){
+        $this->setMeta('');
+    }
 
     public function uploadPhotoAction(){
         function str_random($length){
@@ -33,7 +35,6 @@ class UserController extends AppController {
                 $arr['file_mini'] = $file;
 
                 //save in db
-
             }
         } else {
             $uploadfile = $uploaddir . basename($_FILES['file']['name']);
@@ -47,7 +48,6 @@ class UserController extends AppController {
                 $arr['status'] = 'fail';
             }
         }
-
 
         header('Content-type: application/json');
         echo json_encode($arr);

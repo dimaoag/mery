@@ -35,3 +35,12 @@ function redirect($http = false){
 function h($str){
     return htmlspecialchars($str, ENT_QUOTES); //преобразования html тегов (экранирования)
 }
+
+/**
+ * @param $dateTime
+ * @return mixed
+ */
+function echoDate($dateTime){
+    $res = explode(' ', $dateTime);
+    return $res[0];
+}

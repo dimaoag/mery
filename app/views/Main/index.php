@@ -132,59 +132,29 @@
         </div>
     </div>
     <article>
+        <?php if (!empty($articles)): ?>
         <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <a href="#">
-                        <img class="card-img-top" src="images/kurs_1.png" alt="Card image cap">
-                    </a>
-                    <div class="card-body index-card-body">
-                        <h5 class="card-title index-card-title">Как наносить правильно макияж</h5>
-                        <div class="cart-info d-flex justify-content-between">
-                            <p class="card-data">07.01.2018</p>
-                            <div>
-                                <i class="fa fa-comment"></i> 6
-                                <i class="fa fa-heart"></i> 221
+            <?php foreach ($articles as $article): ?>
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="#">
+                            <img class="card-img-top" src="images/<?= h($article->img); ?>" alt="<?= h($article->img); ?>">
+                        </a>
+                        <div class="card-body index-card-body">
+                            <h5 class="card-title index-card-title"><?= h($article->title); ?></h5>
+                            <div class="cart-info d-flex justify-content-between">
+                                <p class="card-data"><?= echoDate($article->created_at); ?></p>
+                                <div>
+                                    <i class="fa fa-comment"></i> <?= h($article->comments); ?>
+                                    <i class="fa fa-heart"></i> <?= h($article->likes); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <a href="#">
-                        <img class="card-img-top" src="images/kurs_1.png" alt="Card image cap">
-                    </a>
-                    <div class="card-body index-card-body">
-                        <h5 class="card-title index-card-title">Как наносить правильно макияж</h5>
-                        <div class="cart-info d-flex justify-content-between">
-                            <p class="card-data">07.01.2018</p>
-                            <div>
-                                <i class="fa fa-comment"></i> 6
-                                <i class="fa fa-heart"></i> 221
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <a href="#">
-                        <img class="card-img-top" src="images/kurs_1.png" alt="Card image cap">
-                    </a>
-                    <div class="card-body index-card-body">
-                        <h5 class="card-title index-card-title">Как наносить правильно макияж</h5>
-                        <div class="cart-info d-flex justify-content-between">
-                            <p class="card-data">07.01.2018</p>
-                            <div>
-                                <i class="fa fa-comment"></i> 6
-                                <i class="fa fa-heart"></i> 221
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
+        <?php endif; ?>
     </article>
     <div class="horizontal-line">
         <div class="row">
@@ -200,64 +170,32 @@
         </div>
     </div>
     <article>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <a href="#">
-                        <img src="https://i.ytimg.com/vi/IcrbM1l_BoI/hqdefault.jpg" alt="Image 1" />
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Как наносить правильно макияж</h5>
-                        <div class="cart-info d-flex justify-content-between">
-                            <p class="card-data">07.01.2018</p>
-                            <div>
-                                <i class="fa fa-comment"></i> 6
-                                <i class="fa fa-heart"></i> 221
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <a href="#">
-                        <img src="https://i.ytimg.com/vi/aPO_qbRBhfQ/hqdefault.jpg" alt="Image 1" />
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Как наносить правильно макияж</h5>
-                        <div class="cart-info d-flex justify-content-between">
-                            <p class="card-data">07.01.2018</p>
-                            <div>
-                                <i class="fa fa-comment"></i> 6
-                                <i class="fa fa-heart"></i> 221
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <a href="#">
-                        <img src="https://i.ytimg.com/vi/ULDZwdqZTwE/sddefault.jpg" alt="Image 1" />
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Как наносить правильно макияж</h5>
-                        <div class="cart-info d-flex justify-content-between">
-                            <p class="card-data">07.01.2018</p>
-                            <div>
-                                <i class="fa fa-comment"></i> 6
-                                <i class="fa fa-heart"></i> 221
+        <?php if (!empty($videos)): ?>
+            <div class="row">
+                <?php foreach ($videos as $video): ?>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <a href="/category/<?= h($video->category_id);?>">
+                                <img src="https://i.ytimg.com/vi/<?= h($video->url);?>/hqdefault.jpg" alt="<?= h($video->url);?>" />
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><?= h($video->title);?></h5>
+                                <div class="cart-info d-flex justify-content-between">
+                                    <p class="card-data"><?= echoDate($video->created_at); ?></p>
+                                    <div>
+                                        <i class="fa fa-comment"></i> <?= h($video->comments);?>
+                                        <i class="fa fa-heart"></i> <?= h($video->likes);?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
-        </div>
+        <?php endif; ?>
         <div class="row">
             <div class="col-12 text-center">
-                <a href="#">
+                <a href="/videos/">
                     <h5 class="all-video">Все видеоуроки</h5>
                 </a>
             </div>

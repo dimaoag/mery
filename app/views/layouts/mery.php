@@ -7,10 +7,14 @@
     <?= $this->getMeta(); ?>
     <link rel="shortcut icon" href="images/logo.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/croppie.css">
+    <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
+    <link rel="stylesheet" href="css/themes/simple.css">
+
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/media.css"/>
 </head>
@@ -196,12 +200,16 @@
         </div>
     </footer>
 </div>
-
+<script>
+    var path = '<?=PATH;?>';
+</script>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxLYwfr0CLR5y0SXJui7M53Evv47ekWS4&callback=initMap"
         type="text/javascript"></script>
+<script src="js/croppie.min.js"></script>
+<script src="js/jquery.arcticmodal-0.3.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>

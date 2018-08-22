@@ -12,20 +12,23 @@ class UserController extends AppController {
         if (!empty($_POST)){
             $user = new User();
             $data = $_POST;
+            if (empty($data['photo_origin'])){
+                $data['photo_origin'] = 'no_avatar.jpg';
+                $data['photo_profile'] = 'no_avatar.jpg';
+            }
             $data['phone'] = str_replace(" ", "", $data['phone']);
             $user->load($data);
             if (!$user->validate($data) || !$user->isUnique()){
                 $user->getErrors();
-                $_SESSION['form_data'] = $data;
             } else {
-                $user->attributes['phone'] = '+' . $user->attributes['phone'];
                 $user->hashPassword();
                 $user_id = $user->save('user');
-
-//                $turboSMS = new TurboSMS();
-//                if ($turboSMS->send($user->attributes['phone'], '1111')){
-//                    $_SESSION['success'] = 'Success!';
-//                }
+                $code = User::generateCode($user_id);
+                $turboSMS = new TurboSMS();
+                if ($turboSMS->send($user->attributes['phone'], $code)){
+                    $_SESSION['user_id'] = $user_id;
+                    redirect(PATH .'/user/confirm');
+                }
             }
             redirect();
         }
@@ -35,7 +38,45 @@ class UserController extends AppController {
 
     public function confirmAction(){
         $this->setMeta('Подтвердите свой телефон');
+        if (!empty($_POST) && isset($_SESSION['user_id'])){
+            $user = \R::load('user', $_SESSION['user_id']);
+            if ((int)$_POST['code'] == $user->code){
+                $user->active = 1;
+                $res = \R::store($user);
+                redirect(PATH . '/user/login');
+            }
+            $_SESSION['errors'] = 'Ошибка!. Неверный код.';
+            redirect();
+        }
+    }
 
+
+    public function loginAction(){
+        if (!empty($_POST)){
+            $user = new User();
+            if ($user->login()){
+                redirect(PATH);
+            } else {
+                $_SESSION['errors'] = 'Ошибка!. Телефон или пароль неверны!';
+            }
+            redirect();
+        }
+        $this->setMeta('Вход на сайт');
+    }
+
+
+    public function logoutAction(){
+        if (isset($_SESSION['user'])) {
+            unset($_SESSION['user']);
+        }
+        if (isset($_SESSION['user_id'])) {
+            unset($_SESSION['user_id']);
+        }
+        if (isset($_SESSION['errors']) || $_SESSION['success']) {
+            unset($_SESSION['errors']);
+            unset($_SESSION['success']);
+        }
+        redirect(PATH);
     }
 
 

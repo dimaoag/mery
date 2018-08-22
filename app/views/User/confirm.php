@@ -7,7 +7,7 @@
                         <form class="login100-form validate-form" action="<?=PATH;?>/user/confirm" method="post">
                             <span class="login100-form-title">Подтверждение номера телефона</span>
                             <div class="wrap-input100 validate-input m-t-50 m-b-35" data-validate="Введите код">
-                                <input class="input100" type="text" name="code"
+                                <input class="input100" type="text" maxlength="4" name="code"
                                        required>
                                 <span class="focus-input100" data-placeholder="Введите код с смс"></span>
                             </div>

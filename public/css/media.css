@@ -120,4 +120,7 @@
     .table-item-delete{
         display: none;
     }
+    .reg-upload-photo{
+        display: none;
+    }
 }

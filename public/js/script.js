@@ -101,11 +101,11 @@ $(document).ready(function ($) {
             $.ajax({
                 url: path + '/user/upload-photo',
                 type: "POST",
-                data: 'photo=' + html + "&photo_c=" + $('input[name="photo_c"]').val(),
+                data: 'photo=' + html + "&photo_origin=" + $('input[name="photo_origin"]').val(),
                 dataType: 'json',
             }).done(function (html) {
                 if (html.status == 'success'){
-                    $('input[name="photo_i"]').val(html.file_mini);
+                    $('input[name="photo_profile"]').val(html.file_mini);
                     $('.perscab-photoedit-img img').attr('src', html.path_mini);
                     $('.profile-modal-photo').arcticmodal('close');
                 }
@@ -130,7 +130,7 @@ $(document).ready(function ($) {
             dataType: 'json',
         }).done(function (html) {
             if (html.status == 'success'){
-                $('input[name="photo_c"]').val(html.file_max);
+                $('input[name="photo_origin"]').val(html.file_max);
                 $('.profile_photo_i').attr('src', html.path_max);
 
                 basic = $('.profile_photo_i').croppie({
@@ -163,7 +163,7 @@ $(document).ready(function ($) {
     $(function(){
 
         $(document).ready(function() {
-            $("[data-mask='callback-catalog-phone']").mask("3 80 9 9  9 9 9  9 9  9 9");
+            $("[data-mask='callback-catalog-phone']").mask("+3 80 9 9  9 9 9  9 9  9 9");
         });
     })
 })(jQuery));

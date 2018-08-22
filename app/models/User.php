@@ -11,7 +11,8 @@ class User extends AppModel {
         'phone' => '',
         'email' => '',
         'password' => '',
-        'img' => 'no_avatar.jpg',
+        'photo_origin' => '',
+        'photo_profile' => '',
         'role' => 'user',
     ];
 
@@ -25,9 +26,6 @@ class User extends AppModel {
         ],
         'email' => [
             ['email']
-        ],
-        'numeric' => [
-            ['phone']
         ],
         'lengthMin' => [
             ['first_name', 4],
@@ -64,15 +62,15 @@ class User extends AppModel {
      * @return bool
      */
     public function login($isAdmin = false){
-        $login = !empty(trim($_POST['login'])) ? trim($_POST['login']) : null;
+        $phone = !empty($_POST['phone']) ? trim(str_replace(" ", "", $_POST['phone'])) : null;
         $password = !empty(trim($_POST['password'])) ? trim($_POST['password']) : null;
-        $login = htmlspecialchars($login);
+        $phone = htmlspecialchars($phone);
         $password = htmlspecialchars($password);
-        if ($login && $password){
+        if ($phone && $password){
             if ($isAdmin){
-                $user = \R::findOne('user', "login = ? AND role = 'admin'", [$login]);
+                $user = \R::findOne('user', "phone = ? AND role = 'admin'", [$phone]);
             } else {
-                $user = \R::findOne('user', "login = ?", [$login]);
+                $user = \R::findOne('user', "phone = ? AND active = 1", [$phone]);
             }
             if ($user){
                 if (password_verify($password, $user->password)){
@@ -87,8 +85,7 @@ class User extends AppModel {
         }
         return false;
     }
-
-
+    
     /**
      * @return bool
      */
@@ -108,10 +105,19 @@ class User extends AppModel {
     }
 
 
+    /**
+     * @param $id
+     * @return bool|int
+     */
     public static function generateCode($id){
-
-
-
+        $code = rand(1000, 9999);
+        $user = \R::load('user', $id);
+        $user->code = $code;
+        $res = \R::store($user);
+        if ($res){
+            return $code;
+        }
+        return false;
     }
 
 

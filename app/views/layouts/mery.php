@@ -58,10 +58,17 @@
                                     <img src="images/logo.png" alt="image">
                                 </a>
                                 <div class="auth">
-                                    <a href="<?=PATH;?>/user/registration" class="signup">Регистрация</a>
-                                    /
-                                    <a href="/user/login" class="login">Вход</a>
-                                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                                    <?php if (!empty($_SESSION['user'])): ?>
+                                        <a href="<?=PATH;?>/user/cabinet" class="signup mr-2"><?=h($_SESSION['user']['first_name']);?></a>
+                                        <a href="<?=PATH;?>/user/logout">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                        </a>
+                                    <?php else: ?>
+                                        <a href="<?=PATH;?>/user/registration" class="signup">Регистрация</a>
+                                        /
+                                        <a href="/user/login" class="login">Вход</a>
+                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                                    <?php endif; ?>
                                 </div>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
@@ -91,10 +98,17 @@
                                 </div>
                                 <div class="burger header-flex-item header-flex-item-3">
                                     <div class="auth">
-                                        <a href="<?=PATH;?>/user/registration" class="signup">Регистрация</a>
-                                        /
-                                        <a href="/user/login" class="login">Вход</a>
-                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        <?php if (!empty($_SESSION['user'])): ?>
+                                            <a href="<?=PATH;?>/user/cabinet" class="signup mr-2"><?=h($_SESSION['user']['first_name']);?></a>
+                                            <a href="<?=PATH;?>/user/logout">
+                                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                            </a>
+                                        <?php else: ?>
+                                            <a href="<?=PATH;?>/user/registration" class="signup">Регистрация</a>
+                                            /
+                                            <a href="/user/login" class="login">Вход</a>
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>

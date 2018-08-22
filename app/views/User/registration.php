@@ -26,10 +26,30 @@
                                 <input class="input100" type="password" name="password">
                                 <span class="focus-input100" data-placeholder="Пароль *"></span>
                             </div>
+                            <div class="m-b-50  reg-upload-photo">
+                                <a href="#" class="add-photo">Загрузить фото</a>
+                                <input type="file" id="c_input_24" name="file" multiple="false" style="display: none">
+                                <input type="hidden" id="c_input_24" name="photo_origin" multiple="false" value="" style="display: none">
+                                <input type="hidden" id="c_input_24" name="photo_profile" multiple="false" value="" style="display: none">
+                            </div>
+                            <div class="perscab-photoedit-img mb-2 reg-upload-photo">
+                                <img src="#" alt="">
+                            </div>
                             <div class="container-login100-form-btn">
                                 <button class="login100-form-btn" type="submit">Зарегистрироваться</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+            <div class="art-modal" style="display: none">
+                <div class="profile-modal-photo box-modal w-75">
+                    <div class="box_modal_close arcticmodal-close"></div>
+                    <div>
+                        <img class="profile_photo_i" src="#" alt="">
+                    </div>
+                    <div class="modal-footer center-wrap">
+                        <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn btn-outline-dark js-main-image">Сохранить</button>
                     </div>
                 </div>
             </div>

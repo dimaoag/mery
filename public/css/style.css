@@ -457,7 +457,7 @@ article{
 }
 
 
-/* --------------- courser ---------*/
+/* --------------- course ---------*/
 .coursers-card{
     margin: 10px 0 10px 0;
 }
@@ -474,6 +474,10 @@ article{
     color: #6d5b97;
     font-size: 1.8rem;
 }
+button.course-btn{
+    border: 2px solid #6d5b97;
+}
+
 a.course-btn{
     color: white;
     outline: none;
@@ -494,6 +498,9 @@ a.course-btn{
 a.courses-all-courses, .courses-all-courses:hover{
     color: #6d5b97;
     text-decoration: underline;
+}
+.text-left{
+    font-size: 1.3rem;
 }
 
 
@@ -531,7 +538,7 @@ a.courses-all-courses, .courses-all-courses:hover{
 }
 /* --------------- course ---------*/
 .rob-nash-title{
-    margin-top: 1.5rem;
+    padding: 3% 0;
     font-size: 1.5rem;
     white-space: normal;
 }
@@ -541,10 +548,7 @@ a.courses-all-courses, .courses-all-courses:hover{
 .carousel-course .owl-nav{
     color: white;
 }
-.course-welcome{
-    height: 100%;
-    width: 100%
-}
+
 .text-image-center{
     position: absolute;
     margin: 0;
@@ -637,4 +641,77 @@ a.modal-btn i{
 }
 .modal-btn-text{
     padding-left: 10px;
+}
+
+.video-wrapper a{
+    position: relative;
+}
+.b-play {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    /*border: 2px solid #fff;*/
+    border-radius: 50%;
+    /*color: #fff;*/
+    transition: all .3s;
+}
+
+.b-play svg {
+    display: block;
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+}
+
+.b-video {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.b-video:hover .b-play {
+    /*color: #00a651;*/
+    /*border-color: #00a651;*/
+}
+
+.b-video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.b-video > img {
+    display: block;
+}
+
+.b-video iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.b-video .b-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
 }

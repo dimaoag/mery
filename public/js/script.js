@@ -13,7 +13,7 @@ if ($("div").is(".owl-carousel-index")){
 
 
 // Initialize and add the map
-if ($("div").is(".map")){
+if ($("div").is("#map")){
     function initMap() {
         // The location of Uluru
         var meri = {lat: 49.235373, lng: 28.489296};

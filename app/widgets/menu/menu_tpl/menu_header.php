@@ -2,7 +2,7 @@
     <?php foreach ($this->menu as $key => $value): ?>
         <?php if ($value['is_child']): ?>
             <li class="nav-item dropdown <?= ($key == 1) ? 'active' : '';?>">
-                <a class="nav-link dropdown-toggle" href="<?= ($key != 1) ? '/menu/'.h($value['alias']) : PATH;?>" id="navbarDropdown<?=$key?>" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="<?= ($key != 1) ? h($value['alias']) : PATH;?>" id="navbarDropdown<?=$key?>" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?= h($value['name']);?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown<?=$key?>">

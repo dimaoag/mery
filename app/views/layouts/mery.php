@@ -197,8 +197,10 @@
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxLYwfr0CLR5y0SXJui7M53Evv47ekWS4&callback=initMap"
-        type="text/javascript"></script>
+<?php if ($_SERVER['REQUEST_URI'] == '/'): ?>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxLYwfr0CLR5y0SXJui7M53Evv47ekWS4&callback=initMap"
+            type="text/javascript"></script>
+<?php endif; ?>
 <script src="js/croppie.min.js"></script>
 <script src="js/jquery.arcticmodal-0.3.min.js"></script>
 

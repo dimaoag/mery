@@ -1,7 +1,7 @@
 <ul>
     <?php foreach ($this->menu as $key => $value): ?>
     <li style="position: relative">
-        <a href="<?= ($key != 1) ? '/menu/'.h($value['alias']) : PATH;?>"><?= h($value['name']);?>
+        <a href="<?= ($key != 1) ? h($value['alias']) : PATH;?>"><?= h($value['name']);?>
             <i class="fa fa-angle-right float-right" aria-hidden="true"></i>
         </a>
         <?php if ($value['is_child']): ?>

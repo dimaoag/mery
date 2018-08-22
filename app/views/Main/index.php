@@ -217,48 +217,23 @@
     <section class="reviews-container">
         <div class="row">
             <div class="col-12 carousel-index">
-                <div class="owl-carousel reviews owl-carousel-index">
-                    <div class="review">
-                        <div class="review-img">
-                            <img src="images/kurs_1.png" alt="image">
-                        </div>
-                        <div class="review-name">Татьяна Мирошенко</div>
-                        <div class="row">
-                            <div class="col-8 offset-2">
-                                <div class="review-text">Lorem Ipsum - это текст-"рыба", часто
-                                    используемый в печати и вэб-дизайне. Lorem Ipsum является
-                                    стандартной "рыбой" для текстов на латинице с начала XVI века.
+                <?php if ($reviews): ?>
+                    <div class="owl-carousel reviews owl-carousel-index">
+                        <?php foreach ($reviews as $review): ?>
+                            <div class="review">
+                                <div class="review-img">
+                                    <img src="upload/<?=$review['photo_profile'];?>" alt="<?=$review['photo_profile'];?>">
+                                </div>
+                                <div class="review-name"><?=h($review['first_name']) . h($review['last_name']);?></div>
+                                <div class="row">
+                                    <div class="col-8 offset-2">
+                                        <div class="review-text"><?=h($review['text']);?></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="review">
-                        <div class="review-img">
-                            <img src="images/kurs_1.png" alt="image">
-                        </div>
-                        <div class="review-name">Оксана Лучко</div>
-                        <div class="row">
-                            <div class="col-8 offset-2">
-                                <div class="review-text">Lorem Ipsum - это текст-"рыба", часто
-                                    используемый в печати и вэб-дизайне.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="review-img">
-                            <img src="images/kurs_1.png" alt="image">
-                        </div>
-                        <div class="review-name">Настя Алексеева</div>
-                        <div class="row">
-                            <div class="col-8 offset-2">
-                                <div class="review-text">Lorem Ipsum - это текст-"рыба", часто
-                                    используемый в
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>

@@ -1,15 +1,25 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dima
- * Date: 23.08.18
- * Time: 10:42
- */
-
 namespace app\models;
 
 
-class Review
-{
+class Review extends AppModel {
+
+    public $attributes = [
+        'user_id' => '',
+        'text' => '',
+        'status' => '',
+        'is_show' => '',
+    ];
+
+
+    public $rules = [
+        'required' => [
+            ['text'],
+        ],
+    ];
+
+
+
+
 
 }

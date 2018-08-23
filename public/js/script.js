@@ -185,3 +185,37 @@ $(document).ready(function(){
     });
 
 });
+
+
+//reviews
+$(document).ready(function () {
+    $('#review_form').on('submit', function (event) {
+        event.preventDefault();
+        var form_data = $(this).serialize();
+        $.ajax({
+            url: path + '/review',
+            method: 'POST',
+            data: form_data,
+            dataType: 'JSON',
+            success: function (data) {
+                  if (data.error != ''){
+                        $('#review_form')[0].reset();
+                        $('#review_message').html(data.error);
+                        load_review();
+                  }
+            },
+        });
+    });
+
+    load_review();
+    function load_review() {
+        $.ajax({
+            url: path + '/review/load',
+            method: 'POST',
+            success: function (data) {
+                $('#reviews_container').html(data);
+            },
+        });
+    }
+
+});

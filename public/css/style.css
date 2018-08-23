@@ -508,7 +508,7 @@ a.courses-all-courses, .courses-all-courses:hover{
 /* --------------- reviews ---------*/
 .page-reviews-reviews{
     border-bottom: 1px solid #d8d8d8;
-    padding-top: 1rem;
+    padding: 1rem 0;
 }
 .page-reviews-reviews:first-child{
     border-top: 1px solid #d8d8d8;
@@ -531,6 +531,16 @@ a.courses-all-courses, .courses-all-courses:hover{
     color: rgba(0,0,0,.3);
 }
 
+.review-btn{
+    background-color: #6d5b97;
+    color: white;
+    border: 2px solid #6d5b97;
+    text-transform: uppercase;
+}
+#text:focus{
+    outline: none;
+    box-shadow: none;
+}
 /* --------------- login ---------*/
 .login100-form-title{
     text-transform: uppercase;

@@ -37,86 +37,34 @@
                 </div>
             <?php endif; ?>
         </div>
-        <div class="col-xl-4">
+        <?php if (!empty($nearest_courses)): ?>
+            <div class="col-xl-4">
             <div class="programs">
                 <h2 class="programs-title text-center">Ближайшие програмы</h2>
                 <ul>
-                    <li>
-                        <div class="programs-date">
-                            <h4>06<br><span>Янв</span></h4>
-                        </div>
-                        <a href="#" class="programs-text">
-                            <h5><b>Курс по электроэпиляции</b></h5>
-                            <p>
-                                <small>Продолжительность: 3 дня</small>
-                            </p>
-                            <p>
-                                <small>Количество мест: 3</small>
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <div class="programs-date">
-                            <h4>06<br><span>Янв</span></h4>
-                        </div>
-                        <a href="" class="programs-text">
-                            <h5><b>Курс по электроэпиляции</b></h5>
-                            <p>
-                                <small>Продолжительность: 3 дня</small>
-                            </p>
-                            <p>
-                                <small>Количество мест: 3</small>
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <div class="programs-date">
-                            <h4>06<br><span>Янв</span></h4>
-                        </div>
-                        <a href="" class="programs-text">
-                            <h5><b>Курс по электроэпиляции</b></h5>
-                            <p>
-                                <small>Продолжительность: 3 дня</small>
-                            </p>
-                            <p>
-                                <small>Количество мест: 3</small>
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <div class="programs-date">
-                            <h4>06<br><span>Янв</span></h4>
-                        </div>
-                        <a href="" class="programs-text">
-                            <h5><b>Курс по электроэпиляции</b></h5>
-                            <p>
-                                <small>Продолжительность: 3 дня</small>
-                            </p>
-                            <p>
-                                <small>Количество мест: 3</small>
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <div class="programs-date">
-                            <h4>06<br><span>Янв</span></h4>
-                        </div>
-                        <a href="" class="programs-text">
-                            <h5><b>Курс по электроэпиляции</b></h5>
-                            <p>
-                                <small>Продолжительность: 3 дня</small>
-                            </p>
-                            <p>
-                                <small>Количество мест: 3</small>
-                            </p>
-                        </a>
-                    </li>
+                    <?php foreach ($nearest_courses as $nearest_course): ?>
+                        <li>
+                            <div class="programs-date">
+                                <h4><?=echoDay($nearest_course['date_start']);?><br><span><?=echoMonth($nearest_course['date_start']);?></span></h4>
+                            </div>
+                            <a href="#" class="programs-text">
+                                <h5><b><?=h($nearest_course['name']);?></b></h5>
+                                <p>
+                                    <small>Продолжительность: <?=dateFormat($nearest_course['date_start'], '.');?> - <?=dateFormat($nearest_course['date_end'], '.');?></small>
+                                </p>
+                                <p>
+                                    <small>Количество мест: <?=h($nearest_course['sits']);?>/<?=h($nearest_course['limit_sits']);?></small>
+                                </p>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
-                <a href="">
+                <a href="<?=PATH;?>/courses">
                     <h2 class="programs-show-all text-center mt-2">Ближайшие програмы</h2>
                 </a>
             </div>
         </div>
+        <?php endif; ?>
     </div>
     <div class="horizontal-line">
         <div class="row">

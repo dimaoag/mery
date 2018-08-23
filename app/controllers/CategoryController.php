@@ -21,9 +21,8 @@ class CategoryController extends AppController {
         $courses_type = \R::findAll('course_type', 'category_id = ?', [$category->id]);
         //courses
         $courses = \R::getAll("SELECT course.*, master.first_name, master.last_name FROM course JOIN master ON course.master_id = master.id WHERE course.category_id = $category->id AND date_start >= CURDATE() ORDER BY date_start ASC");
-//        debug($courses,1);
         //nearest_courses
-        $nearest_courses = \R::getAll("SELECT * FROM course WHERE date_start >= CURDATE()");
+        $nearest_courses = \R::getAll("SELECT * FROM course WHERE date_start >= CURDATE() ORDER BY date_start ASC LIMIT 6");
         //video_reviews
         $video_reviews = \R::findAll('video_review', 'category_id = ? AND is_show = 1', [$category->id]);
 

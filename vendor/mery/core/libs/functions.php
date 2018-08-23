@@ -44,3 +44,9 @@ function echoDate($dateTime){
     $res = explode(' ', $dateTime);
     return $res[0];
 }
+
+function dateFormat($date){
+    $arr = explode('-', $date);
+    $res = array_reverse ($arr);
+    return $res[0].'-'.$res[1].'-'.$res[2];
+}

@@ -5,14 +5,12 @@ namespace app\controllers\admin;
 class MainController extends AdminController {
 
     public function indexAction(){
-
-
-        $countOfUsers = \R::count('user');
+        $countUsers = \R::count('user');
         $countCategories = \R::count('category');
-        $countProducts = \R::count('product');
-        $countNewOrders = \R::count('order', "status = '0'");
+        $countCourses = \R::count('course', 'date_start >= CURDATE()');
+        $countOrders = \R::count('course_order',  "status = '1' AND created_at >= CURDATE()");
 
-        $this->setMeta('Dashboard');
-        $this->setData(compact('countOfUsers', 'countNewOrders', 'countCategories', 'countProducts'));
+        $this->setMeta('Админка');
+        $this->setData(compact('countUsers', 'countCategories', 'countCourses', 'countOrders'));
     }
 }

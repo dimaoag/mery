@@ -18,7 +18,7 @@
                                 <input class="input100" data-mask="callback-catalog-phone" type="text" name="phone" required>
                                 <span class="focus-input100" data-placeholder="Телефон *"></span>
                             </div>
-                            <div class="wrap-input100 validate-input m-t-50 m-b-35" data-validate="Введите свой email">
+                            <div class="wrap-input100 m-t-50 m-b-35">
                                 <input class="input100" type="email" name="email">
                                 <span class="focus-input100" data-placeholder="E-mail"></span>
                             </div>

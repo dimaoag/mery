@@ -3,6 +3,7 @@ namespace app\controllers\admin;
 
 use app\models\AppModel;
 use mery\base\Controller;
+use app\models\User;
 
 class AdminController extends Controller {
 

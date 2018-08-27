@@ -51,7 +51,7 @@ class View
         if (is_array($data)){
             extract($data);
         }
-        $viewPath = APP . "/views{$this->prefix}{$this->controller}/{$this->view}.php";
+        $viewPath = APP . "/views/{$this->prefix}{$this->controller}/{$this->view}.php";
         if (is_file($viewPath)){
             ob_start(); // include buffering
             require_once $viewPath;

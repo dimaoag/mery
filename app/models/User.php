@@ -68,7 +68,7 @@ class User extends AppModel {
         $password = htmlspecialchars($password);
         if ($phone && $password){
             if ($isAdmin){
-                $user = \R::findOne('user', "phone = ? AND role = 'admin'", [$phone]);
+                $user = \R::findOne('user', "phone = ? AND role = 'admin' OR role = 'moderator'", [$phone]);
             } else {
                 $user = \R::findOne('user', "phone = ? AND active = 1", [$phone]);
             }
@@ -98,12 +98,18 @@ class User extends AppModel {
      * @return bool
      */
     public static function isAdmin(){
-        if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin'){
+        if (isset($_SESSION['user']) && ($_SESSION['user']['role'] == 'admin' || $_SESSION['user']['role'] == 'moderator')){
             return true;
         }
         return false;
     }
 
+    public static function isMainAdmin(){
+        if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin'){
+            return true;
+        }
+        return false;
+    }
 
     /**
      * @param $id

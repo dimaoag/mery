@@ -50,7 +50,7 @@
                             <a href="#" class="programs-text">
                                 <h5><b><?=h($nearest_course['name']);?></b></h5>
                                 <p>
-                                    <small>Продолжительность: <?=dateFormat($nearest_course['date_start'], '.');?> - <?=dateFormat($nearest_course['date_end'], '.');?></small>
+                                    <small><?=dateFormat($nearest_course['date_start'], '.');?> - <?=dateFormat($nearest_course['date_end'], '.');?></small>
                                 </p>
                                 <p>
                                     <small>Количество мест: <?=h($nearest_course['sits']);?>/<?=h($nearest_course['limit_sits']);?></small>

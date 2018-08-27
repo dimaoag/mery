@@ -27,7 +27,7 @@ class AppController extends Controller
         $cache = Cache::instance();
         $menu = $cache->get('menu');
         if (!$menu){
-            $menu = \R::getAssoc("SELECT * FROM menu");
+            $menu = \R::getAssoc("SELECT * FROM menu WHERE status = '1'");
             $cache->set('menu', $menu);
         }
         return $menu;
@@ -41,7 +41,7 @@ class AppController extends Controller
         $cache = Cache::instance();
         $categories = $cache->get('categories');
         if (!$categories){
-            $categories = \R::getAssoc("SELECT * FROM category");
+            $categories = \R::getAssoc("SELECT * FROM category WHERE status = '1'");
             $cache->set('categories', $categories);
         }
         return $categories;

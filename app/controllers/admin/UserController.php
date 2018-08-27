@@ -7,15 +7,6 @@ use mery\libs\Pagination;
 
 class UserController extends AdminController {
 
-    public function __construct($route)
-    {
-        parent::__construct($route);
-        if (!User::isMainAdmin()){
-            redirect(ADMIN);
-        }
-    }
-
-
     public function loginAdminAction(){
         $this->layout = 'login_admin';
         if (!empty($_POST)){
@@ -35,6 +26,9 @@ class UserController extends AdminController {
 
 
     public function indexAction(){
+        if (!User::isMainAdmin()){
+            redirect(ADMIN);
+        }
         $page = isset($_GET['page']) ? $_GET['page'] : 1;
         $perpage = 50;
         $count = \R::count('user');
@@ -48,6 +42,9 @@ class UserController extends AdminController {
 
 
     public function editAction(){
+        if (!User::isMainAdmin()){
+            redirect(ADMIN);
+        }
         if (!empty($_POST)){
             $id = $this->getRequestId(false);
             $user = new User();
@@ -77,6 +74,9 @@ class UserController extends AdminController {
 
 
     public function deleteAction(){
+        if (!User::isMainAdmin()){
+            redirect(ADMIN);
+        }
         $user_id = $this->getRequestId();
         $user = \R::load('user', $user_id);
         \R::trash($user);

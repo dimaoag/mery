@@ -191,17 +191,10 @@
                         <i class="fa fa-folder"></i><span>Кеш</span>
                     </a>
                 </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-comments"></i>
-                        <span>Отзывы</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
+                <li data-widget="tree">
+                    <a href="<?=ADMIN?>/review">
+                        <i class="fa fa-shopping-bag"></i><span>Отзывы</span>
                     </a>
-                    <ul class="treeview-menu" data-widget="tree">
-                        <li><a href="<?=ADMIN?>/review">Отзывы на сайте</a></li>
-                    </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">

@@ -8,7 +8,6 @@ class Review extends AppModel {
         'user_id' => '',
         'text' => '',
         'status' => '',
-        'is_show' => '',
     ];
 
 

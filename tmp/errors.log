@@ -4558,3 +4558,18 @@
 [2018-08-27 13:27:26] Text error: Class 'app\controllers\admin\Cache' not found | File: /var/www/mery/app/controllers/admin/CacheController.php | Line: 14 
         
 ====================='=
+[2018-08-27 14:13:37] Text error: Call to a member function getCountPages() on null | File: /var/www/mery/app/views/admin/Review/index.php | Line: 48 
+        
+====================='=
+[2018-08-27 14:47:46] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-27 14:47:52] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-27 14:48:14] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-27 14:51:39] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

@@ -35,7 +35,6 @@ class UserController extends AdminController {
         $pagination = new Pagination($page, $perpage, $count);
         $start = $pagination->getStart();
         $users = \R::findAll('user', "LIMIT $start, $perpage");
-
         $this->setMeta('Все пользователи');
         $this->setData(compact('users', 'pagination', 'count'));
     }
@@ -66,7 +65,6 @@ class UserController extends AdminController {
         }
         $user_id = $this->getRequestId();
         $user = \R::load('user', $user_id);
-
         $this->setMeta('Edit user profile');
         $this->setData(compact('user'));
     }

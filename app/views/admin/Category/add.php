@@ -35,63 +35,13 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-4">
-                                        <div class="box box-danger box-solid file-upload">
-                                            <div class="box-header">
-                                                <h3 class="box-title">Base image</h3>
-                                            </div>
-                                            <div class="box-body">
-                                                <div id="single" class="btn btn-success" data-url="category/add-image" data-name="single">
-                                                    Choose image
-                                                </div>
-                                                <p>
-                                                    <small>
-                                                        Recommended size:
-                                                        <?=\mery\App::$app->getProperty('banner_width'); ?>
-                                                        x
-                                                        <?=\mery\App::$app->getProperty('banner_width'); ?>
-                                                    </small>
-                                                </p>
-                                                <div class="single"></div>
-                                            </div>
-                                            <div class="overlay">
-                                                <i class="fa fa-refresh fa-spin"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="box box-primary box-solid file-upload">
-                                            <div class="box-header">
-                                                <h3 class="box-title">Gallery for product</h3>
-                                            </div>
-                                            <div class="box-body">
-                                                <div id="multi" class="btn btn-success" data-url="category/add-image" data-name="multi">
-                                                    Choose images
-                                                </div>
-                                                <p>
-                                                    <small>
-                                                        Recommended size:
-                                                        <?=\mery\App::$app->getProperty('gallery_with'); ?>
-                                                        x
-                                                        <?=\mery\App::$app->getProperty('gallery_height'); ?>
-                                                    </small>
-                                                </p>
-                                                <div class="multi"></div>
-                                            </div>
-                                            <div class="overlay">
-                                                <i class="fa fa-refresh fa-spin"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
                                     <div class="col-md-6">
                                         <div class="box box-danger box-solid file-upload">
                                             <div class="box-header">
                                                 <h3 class="box-title">Баннер</h3>
                                             </div>
                                             <div class="box-body">
-                                                <div id="banner" class="btn btn-success" data-url="/category/add-image" data-title="banner">
+                                                <div id="banner" class="btn btn-success" data-url="/category/add-image" data-name="banner">
                                                     Выберите изображение
                                                 </div>
                                                 <p>
@@ -115,7 +65,7 @@
                                                 <h3 class="box-title">Мини фото курса</h3>
                                             </div>
                                             <div class="box-body">
-                                                <div id="profile" class="btn btn-success" data-url="/category/add-image" data-title="profile">
+                                                <div id="profile" class="btn btn-success" data-url="/category/add-image" data-name="profile">
                                                     Выберите изображение
                                                 </div>
                                                 <p>
@@ -139,7 +89,7 @@
                                                 <h3 class="box-title">Галерея с изображениями курса</h3>
                                             </div>
                                             <div class="box-body">
-                                                <div id="gallery" class="btn btn-success" data-url="/category/add-image" data-title="gallery">
+                                                <div id="gallery" class="btn btn-success" data-url="/category/add-image" data-name="gallery">
                                                     Choose images
                                                 </div>
                                                 <p>

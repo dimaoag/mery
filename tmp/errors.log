@@ -6187,3 +6187,18 @@
 [2018-08-28 15:02:37] Text error: Action app\controllers\admin\CategoryController::editAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
         
 ====================='=
+[2018-08-28 21:11:37] Text error: View /var/www/mery/app/views/admin/Category/add-image.php not found | File: /var/www/mery/vendor/mery/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-08-28 21:11:59] Text error: View /var/www/mery/app/views/admin/Category/add-image.php not found | File: /var/www/mery/vendor/mery/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-08-28 21:25:50] Text error: View /var/www/mery/app/views/admin/Category/add-image.php not found | File: /var/www/mery/vendor/mery/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-08-28 21:26:41] Text error: View /var/www/mery/app/views/admin/Category/add-image.php not found | File: /var/www/mery/vendor/mery/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-08-28 21:30:18] Text error: View /var/www/mery/app/views/admin/Category/add-image.php not found | File: /var/www/mery/vendor/mery/core/base/View.php | Line: 60 
+        
+====================='=

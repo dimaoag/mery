@@ -55,144 +55,89 @@ $('.sidebar-menu a').each(function () {
 // });
 
 //upload images
-// if ($('div').is('#banner')){
-//     var buttonBanner = $('#banner'),
-//         buttonProfile = $('#profile'),
-//         buttonGallery = $('#gallery'),
-//         file;
-// }
-//
-// if (buttonBanner){
-//     new AjaxUpload(buttonBanner, {
-//         action: adminPath + buttonBanner.data('url') + "?upload=1",
-//         data: {title: buttonBanner.data('name')},
-//         name: buttonBanner.data('name'), //параметр
-//         onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
-//             if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
-//                 alert('Error! Allowed only images.');
-//                 return false;
-//             }
-//             buttonBanner.closest('.file-upload').find('.overlay').css({'display':'block'});
-//             //первый предок (родитель с класом .file-upload) >  ищеи .find('.overlay') и показуем спинер
-//
-//         },
-//         onComplete: function(file, response){ // по завершению аякс запроса
-//             setTimeout(function(){ // чтобы лоадер (спинер) дольше покрутился
-//                 buttonBanner.closest('.file-upload').find('.overlay').css({'display':'none'});
-//
-//                 response = JSON.parse(response);
-//                 $('.' + buttonBanner.data('name')).html('<img src="upload/' + response.file + '" style="max-height: 150px;">');
-//             }, 1000);
-//         }
-//     });
-// }
-//
-//
-// if (buttonProfile){
-//     new AjaxUpload(buttonProfile, {
-//         action: adminPath + buttonProfile.data('url') + "?upload=1",
-//         data: {name: buttonProfile.data('name')},
-//         name: buttonProfile.data('name'), //параметр
-//         onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
-//             if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
-//                 alert('Error! Allowed only images.');
-//                 return false;
-//             }
-//             buttonProfile.closest('.file-upload').find('.overlay').css({'display':'block'});
-//             //первый предок (родитель с класом .file-upload) >  ищеи .find('.overlay') и показуем спинер
-//
-//         },
-//         onComplete: function(file, response){ // по завершению аякс запроса
-//             setTimeout(function(){ // чтобы лоадер (спинер) дольше покрутился
-//                 buttonProfile.closest('.file-upload').find('.overlay').css({'display':'none'});
-//
-//                 response = JSON.parse(response);
-//                 $('.' + buttonProfile.data('name')).html('<img src="upload/' + response.file + '" style="max-height: 150px;">');
-//             }, 1000);
-//         }
-//     });
-// }
-//
-//
-// if (buttonGallery){
-//     new AjaxUpload(buttonGallery, {
-//         action: adminPath + buttonGallery.data('url') + "?upload=1",
-//         data: {name: buttonGallery.data('name')},
-//         name: buttonGallery.data('name'),
-//         onSubmit: function (file, ext) {
-//             if (!(ext && /^(jpg|png|jpeg|gif)$/i.test(ext))) {
-//                 alert('Ошибка! Разрешены только картинки');
-//                 return false;
-//             }
-//             buttonGallery.closest('.file-upload').find('.overlay').css({'display': 'block'});
-//
-//         },
-//         onComplete: function (file, response) {
-//             setTimeout(function () {
-//                 buttonGallery.closest('.file-upload').find('.overlay').css({'display': 'none'});
-//
-//                 response = JSON.parse(response);
-//                 $('.' + buttonGallery.data('name')).append('<img src="upload/' + response.file + '" style="max-height: 150px;">');
-//             }, 1000);
-//         }
-//     });
-// }
-
-//upload images
-if ($('div').is('#single')){
-    var buttonSingle = $('#single'),
-        buttonMulti = $('#multi'),
+if ($('div').is('#banner')){
+    var buttonBanner = $('#banner'),
+        buttonProfile = $('#profile'),
+        buttonGallery = $('#gallery'),
         file;
 }
 
-if (buttonSingle){
-    new AjaxUpload(buttonSingle, {
-        action: adminPath + buttonSingle.data('url') + "?upload=1",
-        data: {name: buttonSingle.data('name')},
-        name: buttonSingle.data('name'), //параметр
+if (buttonBanner){
+    new AjaxUpload(buttonBanner, {
+        action: adminPath + buttonBanner.data('url') + "?upload=1",
+        data: {name: buttonBanner.data('name')},
+        name: buttonBanner.data('name'), //параметр
         onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
             if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
                 alert('Error! Allowed only images.');
                 return false;
             }
-            buttonSingle.closest('.file-upload').find('.overlay').css({'display':'block'});
+            buttonBanner.closest('.file-upload').find('.overlay').css({'display':'block'});
             //первый предок (родитель с класом .file-upload) >  ищеи .find('.overlay') и показуем спинер
 
         },
         onComplete: function(file, response){ // по завершению аякс запроса
             setTimeout(function(){ // чтобы лоадер (спинер) дольше покрутился
-                buttonSingle.closest('.file-upload').find('.overlay').css({'display':'none'});
+                buttonBanner.closest('.file-upload').find('.overlay').css({'display':'none'});
+
                 response = JSON.parse(response);
-                console.log(response);
-                $('.' + buttonSingle.data('name')).html('<img src="../images/' + response.file + '" style="max-height: 150px;">');
+                $('.banner').html('<img src="/upload/' + response.file + '" style="max-height: 100px;">');
             }, 1000);
         }
     });
 }
 
-if (buttonMulti){
-    new AjaxUpload(buttonMulti, {
-        action: adminPath + buttonMulti.data('url') + "?upload=1",
-        data: {name: buttonMulti.data('name')},
-        name: buttonMulti.data('name'),
+
+if (buttonProfile){
+    new AjaxUpload(buttonProfile, {
+        action: adminPath + buttonProfile.data('url') + "?upload=1",
+        data: {name: buttonProfile.data('name')},
+        name: buttonProfile.data('name'), //параметр
+        onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
+            if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
+                alert('Error! Allowed only images.');
+                return false;
+            }
+            buttonProfile.closest('.file-upload').find('.overlay').css({'display':'block'});
+            //первый предок (родитель с класом .file-upload) >  ищеи .find('.overlay') и показуем спинер
+
+        },
+        onComplete: function(file, response){ // по завершению аякс запроса
+            setTimeout(function(){ // чтобы лоадер (спинер) дольше покрутился
+                buttonProfile.closest('.file-upload').find('.overlay').css({'display':'none'});
+
+                response = JSON.parse(response);
+                $('.profile').html('<img src="/upload/' + response.file + '" style="max-height: 100px;">');
+            }, 1000);
+        }
+    });
+}
+
+
+if (buttonGallery){
+    new AjaxUpload(buttonGallery, {
+        action: adminPath + buttonGallery.data('url') + "?upload=1",
+        data: {name: buttonGallery.data('name')},
+        name: buttonGallery.data('name'),
         onSubmit: function (file, ext) {
             if (!(ext && /^(jpg|png|jpeg|gif)$/i.test(ext))) {
                 alert('Ошибка! Разрешены только картинки');
                 return false;
             }
-            buttonMulti.closest('.file-upload').find('.overlay').css({'display': 'block'});
+            buttonGallery.closest('.file-upload').find('.overlay').css({'display': 'block'});
 
         },
         onComplete: function (file, response) {
             setTimeout(function () {
-                buttonMulti.closest('.file-upload').find('.overlay').css({'display': 'none'});
+                buttonGallery.closest('.file-upload').find('.overlay').css({'display': 'none'});
 
                 response = JSON.parse(response);
-                $('.' + buttonMulti.data('name')).append('<img src="images/' + response.file + '" style="max-height: 150px;">');
+                $('.gallery').append('<img src="/upload/' + response.file + '" style="max-height: 100px;">');
             }, 1000);
         }
     });
 }
+
 
 
 

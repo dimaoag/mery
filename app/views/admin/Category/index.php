@@ -31,7 +31,7 @@
                             <?php foreach ($categories as $category):?>
                                 <tr>
                                     <td>
-                                        <img style="max-width: 50px" src="../images/<?=$category['img_preview'];?>" alt="">
+                                        <img style="max-width: 50px" src="/upload/<?=$category['img_preview'];?>" alt="">
                                     </td>
                                     <td><?=$category['name'];?></td>
                                     <td><?=$category['menu_name'];?></td>

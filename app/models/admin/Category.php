@@ -59,10 +59,10 @@ class Category extends AppModel {
     }
 
     public function uploadImg($name, $wmax, $hmax){
-        $uploaddir = WWW . '/images/';
+        $uploaddir = WWW . '/upload/';
         $ext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $_FILES[$name]['name'])); // расширение картинки
         $types = array("image/gif", "image/png", "image/jpeg", "image/pjpeg", "image/x-png"); // массив допустимых расширений
-        if($_FILES[$name]['size'] > 1048576){
+        if($_FILES[$name]['size'] > 5048576){
             $res = array("error" => "Error! Max size of file - 1 Мб!");
             exit(json_encode($res));
         }
@@ -77,10 +77,14 @@ class Category extends AppModel {
         $new_name = md5(time()).".$ext";
         $uploadfile = $uploaddir.$new_name;
         if(@move_uploaded_file($_FILES[$name]['tmp_name'], $uploadfile)){
-            if($name == 'single'){
-                $_SESSION['single'] = $new_name;
-            }else{
-                $_SESSION['multi'][] = $new_name;
+            if($name == 'banner'){
+                $_SESSION['banner'] = $new_name;
+            }
+            if ($name == 'profile'){
+                $_SESSION['profile'] = $new_name;
+            }
+            if ($name == 'gallery'){
+                $_SESSION['gallery'][] = $new_name;
             }
             self::resize($uploadfile, $uploadfile, $wmax, $hmax, $ext);
             $res = array("file" => $new_name);

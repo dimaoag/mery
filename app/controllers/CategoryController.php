@@ -14,7 +14,7 @@ class CategoryController extends AppController {
         //gallery
         $gallery = \R::findAll('gallery', 'category_id = ?', [$category->id]);
         //master
-        $master = \R::findOne('master', 'category_id = ?', [$category->id]);
+        $masters = \R::findAll('master', 'category_id = ?', [$category->id]);
         //course_kind (обучения с 0 или повышение квалификации)
         $courses_kind = \R::findAll('course_kind', 'category_id = ?', [$category->id]);
         //course_type (базовый или полный)
@@ -30,7 +30,7 @@ class CategoryController extends AppController {
 
 
         $this->setMeta($category->name);
-        $this->setData(compact('category', 'gallery', 'master', 'courses_kind', 'courses_type', 'courses', 'nearest_courses', 'video_reviews'));
+        $this->setData(compact('category', 'gallery', 'masters', 'courses_kind', 'courses_type', 'courses', 'nearest_courses', 'video_reviews'));
     }
 
 }

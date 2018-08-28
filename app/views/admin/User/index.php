@@ -31,7 +31,8 @@
                             <?php foreach ($users as $user):?>
                                 <tr>
                                     <td>
-                                        <img style="max-width: 50px" src="../upload/<?=$user->photo_profile?>" alt=""></td>
+                                        <img style="max-width: 50px" src="../upload/<?=$user->photo_profile?>" alt="">
+                                    </td>
                                     <td><?=$user->id?></td>
                                     <td><?=$user->first_name?> <?=$user->last_name?></td>
                                     <td><?=$user->phone?></td>

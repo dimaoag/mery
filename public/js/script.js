@@ -219,3 +219,37 @@ $(document).ready(function () {
     }
 
 });
+
+//add products to cart
+$('.modal-body').on('click', '.add-order', function (e) {
+    e.preventDefault();
+    var price = $(this).data('price'),
+        course_id = $(this).data('course_id');
+    $.ajax({
+        url: '/order/add',
+        data: {
+            price: price,
+            course_id: course_id,
+        },
+        type: 'POST',
+        success: function(res){
+            $('.fade').hide();
+            showModal();
+        },
+        error: function () {
+            alert("Ошибка. Свяжитесь с нами по телефону.");
+        }
+    });
+});
+
+//show modal after add order
+
+function showModal() {
+    $('.order-modal').arcticmodal();
+}
+
+$('.order-modal').on('click', '.close_modal', function (e) {
+    e.preventDefault();
+    $.arcticmodal('close');
+    location.reload();
+});

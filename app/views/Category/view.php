@@ -116,7 +116,11 @@
                                                                                     <td><?=h($course['sits']);?>/<?=h($course['limit_sits']);?></td>
                                                                                     <td class="table-item-delete"><?=h($course_type->price);?>грн</td>
                                                                                     <td>
-                                                                                        <a href="" class="programs-show-all modal-btn"><i class="fa fa-plus-square" aria-hidden="true"></i><span class="modal-btn-text">Бронировать</span></a>
+                                                                                        <a href="#" class="programs-show-all modal-btn btn <?php if (!isset($_SESSION['user']) || $course['sits'] >= $course['limit_sits']) echo 'disabled';?> add-order"
+                                                                                           data-price="<?=h($course_type->price);?>" data-course_id="<?=h($course['id']);?>">
+                                                                                            <i class="fa fa-plus-square disabled" aria-hidden="true"></i>
+                                                                                            <span class="modal-btn-text disabled">Бронировать</span>
+                                                                                        </a>
                                                                                     </td>
                                                                                 </tr>
                                                                                 <?php $i++?>
@@ -210,4 +214,20 @@
             </div>
         </div>
     <?php endif; ?>
+</div>
+
+<div class="art-modal" style="display: none">
+    <div class="container">
+        <div class="row">
+            <div class="box-modal col-12 order-modal w-100">
+                <div class="box_modal_close arcticmodal-close"></div>
+                <div>
+                    <h4>Спасибо за Ваш заказ. Наш менеджер в ближайшее время свяжится с вами.</h4>
+                </div>
+                <div class="modal-footer center-wrap">
+                    <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn btn-outline-dark close_modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

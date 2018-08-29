@@ -175,8 +175,8 @@
                     </a>
                     <ul class="treeview-menu" data-widget="tree">
                         <li><a href="<?=ADMIN?>/course">Все курсы</a></li>
-                        <li><a href="<?=ADMIN?>/course/course-kind">Виды курсов</a></li>
-                        <li><a href="<?=ADMIN?>/course/course-type">Типы курсов</a></li>
+                        <li><a href="<?=ADMIN?>/course-kind">Виды курсов</a></li>
+                        <li><a href="<?=ADMIN?>/course-type">Типы курсов</a></li>
                         <li><a href="<?=ADMIN?>/course/add">Создать курс</a></li>
                     </ul>
                 </li>

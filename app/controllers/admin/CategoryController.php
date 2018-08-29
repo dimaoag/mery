@@ -13,7 +13,6 @@ class CategoryController extends AdminController {
 
         $categories = \R::getAll("SELECT category.*, menu.name as menu_name FROM category JOIN menu ON category.menu_id = menu.id");
 
-
         $this->setMeta('Категории курсов');
         $this->setData(compact('categories', 'masters'));
     }
@@ -47,7 +46,6 @@ class CategoryController extends AdminController {
         }
         $this->setMeta('Создать новою категорию курсов');
     }
-
 
 
     public function editAction(){

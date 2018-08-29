@@ -6,9 +6,7 @@ namespace app\controllers\admin;
 class CourseKindController extends AdminController {
 
     public function indexAction(){
-
-        $kind_courses = \R::getAll("SELECT course_kind.*, category.name as cat_name FROM course_kind JOIN category ON course_kind.category_id = category.id");
-
+        $kind_courses = \R::getAll("SELECT course_kind.*, category.name as cat_name FROM course_kind JOIN category ON course_kind.category_id = category.id ORDER BY course_kind.category_id DESC");
         $this->setMeta('Виды курсов');
         $this->setData(compact('kind_courses'));
     }
@@ -50,10 +48,6 @@ class CourseKindController extends AdminController {
         if ($res) $_SESSION['success'] = 'Вид курса удалено!';
         redirect();
     }
-
-
-
-
 
 
 }

@@ -20,10 +20,6 @@ $('.sidebar-menu a').each(function () {
 });
 
 
-// include CKeditor
-// CKEDITOR.replace('editor1');
-// $('#editor1').ckeditor();
-
 
 //reset filter in add new product
 // $('#reset_filter').click(function () {
@@ -175,6 +171,28 @@ $('.del-img').on('click', function () {
     });
 
 });
+
+//dependence dropdown list
+$(document).ready(function () {
+    $('#category_id').change(function () {
+        var category_id = $('#category_id').val();
+        if (category_id != ''){
+            $.ajax({
+                url: adminPath + '/course-type/kinds',
+                method: 'POST',
+                data: {category_id: category_id},
+                success: function (data) {
+                    $('#kind_id').html(data);
+                },
+            });
+        }
+    });
+});
+
+// include CKeditor
+// CKEDITOR.replace('editor1');
+$('#editor1').ckeditor();
+
 
 
 //create modification product

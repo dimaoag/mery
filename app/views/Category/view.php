@@ -77,7 +77,7 @@
                                 <h4 class="text-center programs-title mb-3 course-title"><?=h($course_type->name);?></h4>
 <!--                                <small class="text-secondary text-center w-100 d-block">-->
 <!--                                </small>-->
-                                <textarea class="w-100 mt-3 course-textarea"><?=h($course_type->description);?></textarea>
+                                <div class="w-100 mt-3 course-textarea"><?=$course_type->description;?></div>
                                 <p class="course-price text-center"><?=h($course_type->price);?> грн</p>
                                 <button type="button" class="programs-show-all course-btn" data-toggle="modal" data-target="#exampleModalCenter<?=h($course_type->id);?>">Посмотреть даты</button>
                                 <div class="modal fade" id="exampleModalCenter<?=h($course_type->id);?>"

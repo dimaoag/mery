@@ -22,6 +22,8 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
 
+
+
     <link rel="stylesheet" href="admin.css">
     <!-- Morris chart -->
 <!--    <link rel="stylesheet" href="bower_components/morris.js/morris.css">-->
@@ -509,6 +511,7 @@
 <script src="bower_components/ckeditor/adapters/jquery.js"></script>
 <!-- Slimscroll -->
 <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
 <!-- FastClick -->
 <!--<script src="bower_components/fastclick/lib/fastclick.js"></script>-->
 <!-- AdminLTE App -->

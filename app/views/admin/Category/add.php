@@ -86,11 +86,11 @@
                                     <div class="col-md-12">
                                         <div class="box box-primary box-solid file-upload">
                                             <div class="box-header">
-                                                <h3 class="box-title">Галерея с изображениями курса</h3>
+                                                <h3 class="box-title">Галерея с изображениями работ</h3>
                                             </div>
                                             <div class="box-body">
                                                 <div id="gallery" class="btn btn-success" data-url="/category/add-image" data-name="gallery">
-                                                    Choose images
+                                                    Выберите изображение
                                                 </div>
                                                 <p>
                                                     <small>

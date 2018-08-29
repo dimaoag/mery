@@ -162,8 +162,7 @@
                     </a>
                     <ul class="treeview-menu" data-widget="tree">
                         <li><a href="<?=ADMIN?>/category">Все категории</a></li>
-                        <li><a href="<?=ADMIN?>/category/video-review">Видеоотзывы</a></li>
-                        <li><a href="<?=ADMIN?>/category/add-category">Добавить новою категорию</a></li>
+                        <li><a href="<?=ADMIN?>/category/add">Добавить новою категорию</a></li>
                     </ul>
                 </li>
                 <li class="treeview">

@@ -143,7 +143,7 @@ if (buttonGallery){
 
 //delete images from  product
 $('.del-img').on('click', function () {
-    var res = confirm('Agree action?');
+    var res = confirm('Вы действительно хотите удалить фото?');
     if (!res) return false;
 
     var this_img = $(this),
@@ -152,7 +152,7 @@ $('.del-img').on('click', function () {
         type = this_img.data('type');
 
     $.ajax({
-        url: adminPath + '/product/delete-image',
+        url: adminPath + '/category/delete-image',
         data: {id: id, src: src, type: type},
         type: 'post',
         beforeSend: function () {

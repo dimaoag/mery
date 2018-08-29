@@ -13,7 +13,7 @@
 
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <a href="<?=ADMIN?>/category/add" class="btn btn-success">Добавить видеоотзыв в категорию курсов</a>
+                    <a href="<?=ADMIN?>/category/video-review-add?id=<?=$category->id;?>" class="btn btn-success">Добавить видеоотзыв в категорию курсов</a>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead>

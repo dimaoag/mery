@@ -30,7 +30,7 @@
     <!-- jvectormap -->
 <!--    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">-->
     <!-- Date Picker -->
-<!--    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">-->
+    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <!-- Daterange picker -->
 <!--    <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">-->
     <!-- bootstrap wysihtml5 - text editor -->
@@ -501,7 +501,8 @@
 <script src="bower_components/moment/min/moment.min.js"></script>
 <!--<script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>-->
 <!-- datepicker -->
-<!--<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>-->
+<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="bower_components/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <!--<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>-->
 <!-- Select2 -->

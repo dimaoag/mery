@@ -176,7 +176,7 @@
                     <?php foreach ($nearest_courses as $nearest_course):?>
                         <div class="nearest">
                             <div class="nearest-img">
-                                <img src="images/<?=h($nearest_course['img']);?>" alt="image">
+                                <img src="upload/<?=h($nearest_course['img']);?>" alt="image">
                             </div>
                             <h4 class="nearest-title"><?=h($nearest_course['name']);?></h4>
                             <small class="text-right d-block"><?=h(dateFormat($nearest_course['date_start']));?></small>

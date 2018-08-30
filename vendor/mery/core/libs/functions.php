@@ -40,7 +40,13 @@ function h($str){
  * @param $dateTime
  * @return mixed
  */
-function echoDate($dateTime){
+function echoDate($dateTime, $time = false, $delimiter = '-'){
+    if ($time){
+        $res = explode(' ', $dateTime);
+        $arr = explode('-', $res[0]);
+        $res_1 = array_reverse ($arr);
+        return $res_1[0].$delimiter.$res_1[1].$delimiter.$res_1[2]. ' ' .$res[1];
+    }
     $res = explode(' ', $dateTime);
     return $res[0];
 }
@@ -96,4 +102,14 @@ function echoMonth($date){
 function echoDay($date){
     $arr = explode('-', $date);
     return $arr[2];
+}
+
+function getStatus(){
+    $arr = [
+        '1' => 'Новая заявка',
+        '2' => 'В оброботке',
+        '3' => 'Забронировано',
+        '4' => 'Отказ',
+    ];
+    return $arr;
 }

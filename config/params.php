@@ -16,4 +16,6 @@ return [
     'preview_height' => 390,
     'gallery_with' => 337,
     'gallery_height' => 337,
+    'course_with' => 442,
+    'course_height' => 360,
 ];

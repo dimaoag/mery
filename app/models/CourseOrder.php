@@ -6,7 +6,9 @@ class CourseOrder extends AppModel {
 
     public $attributes = [
         'course_id' => '',
-        'user_id' => '',
+        'first_name' => '',
+        'last_name' => '',
+        'phone' => '',
         'price' => '',
         'status' => '',
     ];

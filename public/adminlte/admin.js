@@ -194,6 +194,119 @@ $(document).ready(function () {
 $('#editor1').ckeditor();
 
 
+//datepicker
+$('.datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+    inline: true,
+    language: 'ru',
+    changeYear: true,
+    changeMonth: true,
+    todayHighlight: true,
+});
+
+
+//dependence dropdown list types
+$(document).ready(function () {
+    $('.select_kind').change(function () {
+        var kind_id = $('.select_kind').val();
+        if (kind_id != ''){
+            $.ajax({
+                url: adminPath + '/course/types',
+                method: 'POST',
+                data: {kind_id: kind_id},
+                success: function (data) {
+                    $('#type_id').html(data);
+                },
+            });
+        }
+    });
+});
+
+//dependence dropdown list types
+$(document).ready(function () {
+    $('.select_type').change(function () {
+        var type_id = $('.select_type').val();
+        if (type_id != ''){
+            $.ajax({
+                url: adminPath + '/course/master',
+                method: 'POST',
+                data: {type_id: type_id},
+                success: function (data) {
+                    $('#master_id').html(data);
+                },
+            });
+        }
+    });
+});
+
+
+//upload images
+if ($('div').is('#course')){
+    var buttonCouse = $('#course'),
+        file;
+}
+
+if (buttonCouse){
+    new AjaxUpload(buttonCouse, {
+        action: adminPath + buttonCouse.data('url') + "?upload=1",
+        data: {name: buttonCouse.data('name')},
+        name: buttonCouse.data('name'), //параметр
+        onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
+            if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
+                alert('Error! Allowed only images.');
+                return false;
+            }
+            buttonCouse.closest('.file-upload').find('.overlay').css({'display':'block'});
+            //первый предок (родитель с класом .file-upload) >  ищеи .find('.overlay') и показуем спинер
+
+        },
+        onComplete: function(file, response){ // по завершению аякс запроса
+            setTimeout(function(){ // чтобы лоадер (спинер) дольше покрутился
+                buttonCouse.closest('.file-upload').find('.overlay').css({'display':'none'});
+
+                response = JSON.parse(response);
+                $('.course').html('<img src="/upload/' + response.file + '" style="max-height: 100px;">');
+            }, 1000);
+        }
+    });
+}
+
+//delete images from  product
+$('.del-img-course').on('click', function () {
+    var res = confirm('Вы действительно хотите удалить фото?');
+    if (!res) return false;
+
+    var this_img = $(this),
+        id = this_img.data('id'),
+        src = this_img.data('src'),
+        type = this_img.data('type');
+
+    $.ajax({
+        url: adminPath + '/course/delete-image',
+        data: {id: id, src: src, type: type},
+        type: 'post',
+        beforeSend: function () {
+            this_img.closest('.file-upload').find('.overlay').css({'display': 'block'});
+        },
+        success: function (res) {
+            setTimeout(function () {
+                this_img.closest('.file-upload').find('.overlay').css({'display': 'none'});
+                if (res == 1){
+                    this_img.fadeOut();
+                }
+            }, 1000);
+        },
+        error: function () {
+            setTimeout(function () {
+                this_img.closest('.file-upload').find('.overlay').css({'display': 'none'});
+                alert('Error!')
+            }, 1000);
+        },
+    });
+
+});
+
+
 
 //create modification product
 var modList = [];

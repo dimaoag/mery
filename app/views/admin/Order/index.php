@@ -1,58 +1,54 @@
 <section class="content-header">
-    <h1>All Orders</h1>
+    <h1>Все заявки по курсу "<?=$course->name;?>"</h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN?>"><i class="fa fa-dashboard"></i>Home</a></li>
-        <li><a href="<?=ADMIN?>/order"><i class="fa fa-dashboard"></i>Orders</a></li>
+        <li><a href="<?=ADMIN?>"><i class="fa fa-dashboard"></i>Главная</a></li>
+        <li><a href="<?=ADMIN?>/course"><i class="fa fa-dashboard"></i>Курсы по датам</a></li>
     </ol>
 </section>
-
 <section class="content">
     <div class="row">
         <div class="col-md-12">
             <div class="box">
                 <!-- /.box-header -->
                 <div class="box-body">
+                    <a href="<?=ADMIN?>/order/add?id=<?=$course->id;?>" class="btn btn-success">Записать клиента на курс</a>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Customer</th>
-                                    <th>Status</th>
-                                    <th>Total</th>
-                                    <th>Created_at</th>
-                                    <th>Updated_at</th>
-                                    <th>Actions</th>
+                                    <th>Дата записи</th>
+                                    <th>Названия курса</th>
+                                    <th>Клиент</th>
+                                    <th>Телефон</th>
+                                    <th>Цена</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($orders as $order):?>
-                            <?php $class = $order['status'] ? 'success' : '';?>
-                                <tr class="<?=$class?>">
-                                    <td><?=$order['id']?></td>
-                                    <td><?=$order['name']?></td>
-                                    <td><?=$order['status'] ? 'Closed' : 'New';?></td>
-                                    <td><?=$order['sum']?></td>
-                                    <td><?=$order['date']?></td>
-                                    <td><?=$order['update_at']?></td>
-                                    <td>
-                                        <a href="<?=ADMIN?>/order/view?id=<?=$order['id']?>">
-                                            <i class="fa fa-fw fa-eye"></i>
-                                        </a>
-                                        <a href="<?=ADMIN?>/order/delete?id=<?=$order['id']?>">
-                                            <i class="fa fa-fw fa-trash-o delete text-danger"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php endforeach;?>
+                            <?php $statuses = getStatus(); ?>
+                            <?php if (!empty($orders)): ?>
+                                <?php foreach ($orders as $key => $order):?>
+                                    <tr>
+                                        <td><?=echoDate($order['created_at'], true);?></td>
+                                        <td><?=$course->name;?></td>
+                                        <td><?=$order['first_name'];?> <?=$order['last_name'];?></td>
+                                        <td><?=$order['phone'];?></td>
+                                        <td><?=$order['price'];?></td>
+                                        <td><?=$statuses[$order['status']];?></td>
+                                        <td>
+                                            <a href="<?=ADMIN?>/order/edit?id=<?=$order['id'];?>">
+                                                <i class="fa fa-fw fa-edit"></i>
+                                            </a>
+                                            <a href="<?=ADMIN?>/order/delete?id=<?=$order['id'];?>">
+                                                <i class="fa fa-fw fa-trash-o delete text-danger"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach;?>
+                            <?php endif; ?>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="text-content">
-                        <p><?=count($orders);?> order(s) of <?=$count?></p>
-                        <?php if ($pagination->getCountPages() > 1):?>
-                            <?=$pagination?>
-                        <?php endif; ?>
                     </div>
                 </div>
                 <!-- /.box-body -->

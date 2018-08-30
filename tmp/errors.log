@@ -6478,3 +6478,477 @@
 [2018-08-29 14:37:42] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
         
 ====================='=
+[2018-08-29 14:59:54] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-29 14:59:54] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-29 14:59:54] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-29 14:59:55] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 06:12:13] Text error: Controller app\controllers\admin\CourseController not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 54 
+        
+====================='=
+[2018-08-30 08:18:48] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 08:18:51] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 08:25:54] Text error: Class 'app\controllers\admin\App' not found | File: /var/www/mery/app/controllers/admin/CourseController.php | Line: 74 
+        
+====================='=
+[2018-08-30 08:27:31] Text error: Class 'app\controllers\admin\App' not found | File: /var/www/mery/app/controllers/admin/CourseController.php | Line: 74 
+        
+====================='=
+[2018-08-30 08:29:21] Text error: Class 'app\controllers\admin\App' not found | File: /var/www/mery/app/controllers/admin/CourseController.php | Line: 74 
+        
+====================='=
+[2018-08-30 08:31:00] Text error: Class 'app\controllers\admin\App' not found | File: /var/www/mery/app/controllers/admin/CourseController.php | Line: 74 
+        
+====================='=
+[2018-08-30 08:32:53] Text error: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'status' at row 1 | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 08:34:53] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 08:35:14] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 08:37:08] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 09:36:08] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 09:42:08] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 09:42:28] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:16:59] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AS num FROM course JOIN category ON course.category_id = category.id JOIN cour' at line 1 | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:17:18] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'course_order' in 'field list' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:17:58] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS num ORDER BY course.date_start DESC' at line 1 | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:18:15] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS num ORDER BY course.date_start DESC' at line 1 | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:18:26] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS num ORDER BY course.date_start DESC' at line 1 | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:18:39] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS num ORDER BY course.date_start DESC' at line 1 | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:21:52] Text error: Action app\controllers\admin\CourseController::ordersAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 10:22:02] Text error: Action app\controllers\admin\CourseController::ordersAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 10:22:51] Text error: Action app\controllers\admin\CourseController::orderAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 10:22:55] Text error: Action app\controllers\admin\CourseController::orderAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 10:23:15] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:24:28] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:24:48] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:24:51] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:25:25] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:25:26] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:25:26] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:26:13] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:26:34] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:26:35] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:26:36] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:26:37] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:27:12] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:27:14] Text error: Identifier does not conform to RedBeanPHP security policies. | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php | Line: 723 
+        
+====================='=
+[2018-08-30 10:33:59] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:34:50] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:34:52] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:34:59] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:35:03] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:35:10] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:35:14] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:35:15] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:35:20] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 10:41:03] Text error: Call to a member function getCountPages() on null | File: /var/www/mery/app/views/admin/Order/index.php | Line: 53 
+        
+====================='=
+[2018-08-30 10:41:19] Text error: Call to a member function getCountPages() on null | File: /var/www/mery/app/views/admin/Order/index.php | Line: 53 
+        
+====================='=
+[2018-08-30 10:41:39] Text error: Call to a member function getCountPages() on null | File: /var/www/mery/app/views/admin/Order/index.php | Line: 53 
+        
+====================='=
+[2018-08-30 12:15:52] Text error: Action app\controllers\admin\OrderController::addAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 12:15:57] Text error: Action app\controllers\admin\OrderController::addAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 12:16:35] Text error: Action app\controllers\admin\OrderController::addAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 12:35:43] Text error: Action app\controllers\admin\OrderController::addAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 12:35:52] Text error: Action app\controllers\admin\OrderController::editAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 12:37:17] Text error: Action app\controllers\admin\OrderController::addAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 12:43:51] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 12:48:29] Text error: Action app\controllers\admin\OrderController::editAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 12:49:15] Text error: Page not found | File: /var/www/mery/app/controllers/admin/AdminController.php | Line: 29 
+        
+====================='=
+[2018-08-30 13:04:44] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:06:54] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:06:59] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:07:22] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:08:06] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:08:06] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:08:06] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:10:37] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:10:37] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:10:37] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:10:37] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:11:20] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:11:20] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:11:20] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:11:21] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:11:25] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:11:26] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:11:26] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:11:26] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:13:22] Text error: Action app\controllers\admin\OrderController::addAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 13:14:33] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:14:33] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:14:33] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:14:33] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:16:03] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:16:03] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:16:03] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:16:03] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:16:15] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:16:15] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:16:15] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:16:15] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:16:20] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:16:20] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:16:20] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:16:20] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:18:21] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:18:21] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:18:21] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:18:22] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:18:26] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:18:26] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:18:26] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:18:26] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:19:29] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:19:29] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:19:30] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:19:30] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:19:35] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:19:35] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:19:35] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:19:35] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:19:46] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:19:46] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:19:46] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:19:47] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:20:04] Text error: Action app\controllers\admin\OrderController::addAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-30 13:39:00] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:39:00] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:39:00] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:39:00] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:39:03] Text error: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:39:05] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:39:05] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:39:05] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:39:05] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:39:52] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:39:52] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:39:52] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:39:52] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:40:33] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:40:33] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:40:33] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:40:33] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:41:04] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:41:04] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:41:04] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:41:04] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:41:16] Text error: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:41:19] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:41:19] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:41:19] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:41:19] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:42:39] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:42:40] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:42:40] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:42:40] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 13:42:44] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:42:44] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:42:44] Text error: Page not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 57 
+        
+====================='=
+[2018-08-30 13:42:44] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 14:10:31] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND course_id = 1 -- keep-cache' at line 1 | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 14:13:37] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'price' at row 1 | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 14:16:39] Text error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'price' cannot be null | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-30 15:07:17] Text error: Page not found | File: /var/www/mery/app/controllers/admin/AdminController.php | Line: 29 
+        
+====================='=

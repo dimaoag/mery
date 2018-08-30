@@ -23,6 +23,7 @@
                                 <th>Раздел меню</th>
                                 <th>Мастер</th>
                                 <th>Статус</th>
+                                <th>Галерея с фото</th>
                                 <th>Видеоотзовы</th>
                                 <th>Действие</th>
                             </tr>
@@ -45,6 +46,9 @@
                                         <?php endif; ?>
                                     </td>
                                     <td><?= $category['status'] ? 'Показывать' : 'Не показывать';?></td>
+                                    <td>
+                                        <a href="<?=ADMIN?>/gallery?id=<?=$category['id'];?>" class="btn btn-xs">Галерея</a>
+                                    </td>
                                     <td>
                                         <a href="<?=ADMIN?>/category/video-reviews?id=<?=$category['id'];?>" class="btn btn-xs">Видеоотзовы</a>
                                     </td>

@@ -49,15 +49,20 @@ class CategoryController extends AdminController {
 
 
     public function editAction(){
+//        unset($_SESSION['gal']);
         if (!empty($_POST)) {
+//            debug($_SESSION ,1);
             $id = $this->getRequestId(false);
             $category = new Category();
             $data = $_POST;
             $category->load($data);
             $category->attributes['status'] = $category->attributes['status'] ? '1' : '0';
             $category->attributes['menu_id'] = '2';
-            $category->getImgBanner();
-            $category->getImgProfile();
+            if (isset($_SESSION['gal']) && $_SESSION['gal'] != 1){
+                $category->getImgBanner();
+                $category->getImgProfile();
+                unset($_SESSION['gal']);
+            }
             if (!$category->validate($data)){
                 $category->getErrors();
                 redirect();
@@ -143,6 +148,7 @@ class CategoryController extends AdminController {
         if ($type == 'gallery'){
             if (\R::exec("DELETE FROM gallery WHERE category_id = ? AND src = ?", [$id, $src])){
                 @unlink(WWW . '/upload/'. $src);
+                $_SESSION['gal'] = '1';
                 exit('1');
             }
         }

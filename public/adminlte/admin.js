@@ -110,10 +110,44 @@ if (buttonProfile){
 }
 
 
+// if (buttonGallery){
+//     new AjaxUpload(buttonGallery, {
+//         action: adminPath + buttonGallery.data('url') + "?upload=1",
+//         data: {name: buttonGallery.data('name')},
+//         name: buttonGallery.data('name'),
+//         onSubmit: function (file, ext) {
+//             if (!(ext && /^(jpg|png|jpeg|gif)$/i.test(ext))) {
+//                 alert('Ошибка! Разрешены только картинки');
+//                 return false;
+//             }
+//             buttonGallery.closest('.file-upload').find('.overlay').css({'display': 'block'});
+//
+//         },
+//         onComplete: function (file, response) {
+//             setTimeout(function () {
+//                 buttonGallery.closest('.file-upload').find('.overlay').css({'display': 'none'});
+//
+//                 response = JSON.parse(response);
+//                 $('.gallery').append('<img src="/upload/' + response.file + '" style="max-height: 100px;">');
+//             }, 1000);
+//         }
+//     });
+// }
+
+
+//upload images
+if ($('div').is('#gallery')){
+    var buttonGallery = $('#gallery'),
+        file;
+}
+
 if (buttonGallery){
     new AjaxUpload(buttonGallery, {
         action: adminPath + buttonGallery.data('url') + "?upload=1",
-        data: {name: buttonGallery.data('name')},
+        data: {
+            name: buttonGallery.data('name'),
+            id: buttonGallery.data('id')
+        },
         name: buttonGallery.data('name'),
         onSubmit: function (file, ext) {
             if (!(ext && /^(jpg|png|jpeg|gif)$/i.test(ext))) {
@@ -134,6 +168,41 @@ if (buttonGallery){
     });
 }
 
+
+//delete images from  product
+$('.del-gallery').on('click', function () {
+    var res = confirm('Вы действительно хотите удалить фото?');
+    if (!res) return false;
+
+    var this_img = $(this),
+        id = this_img.data('id'),
+        src = this_img.data('src'),
+        type = this_img.data('type');
+
+    $.ajax({
+        url: adminPath + '/gallery/delete-image',
+        data: {id: id, src: src, type: type},
+        type: 'post',
+        beforeSend: function () {
+            this_img.closest('.file-upload').find('.overlay').css({'display': 'block'});
+        },
+        success: function (res) {
+            setTimeout(function () {
+                this_img.closest('.file-upload').find('.overlay').css({'display': 'none'});
+                if (res == 1){
+                    this_img.fadeOut();
+                }
+            }, 1000);
+        },
+        error: function () {
+            setTimeout(function () {
+                this_img.closest('.file-upload').find('.overlay').css({'display': 'none'});
+                alert('Error!')
+            }, 1000);
+        },
+    });
+
+});
 
 
 

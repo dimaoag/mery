@@ -46,7 +46,7 @@
 }
 
 
-.del-img, .del-img-course{
+.del-img, .del-img-course, .del-gallery{
     max-height: 150px !important;
     cursor: pointer !important;
 }

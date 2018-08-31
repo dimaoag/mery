@@ -3,14 +3,12 @@ namespace app\models\admin;
 
 use app\models\AppModel;
 
-class Category extends AppModel {
+class CategoryEdit extends AppModel {
 
     public $attributes = [
         'name' => '',
         'alias' => '',
         'menu_id' => '',
-        'banner' => '',
-        'img_preview' => '',
         'price' => '',
         'status' => '',
     ];
@@ -30,64 +28,6 @@ class Category extends AppModel {
 
     ];
 
-
-
-    public function getImgBanner(){
-        if (!empty($_SESSION['banner'])){
-            $this->attributes['banner'] = $_SESSION['banner'];
-            unset($_SESSION['banner']);
-        }
-    }
-
-    public function getImgProfile(){
-        if (!empty($_SESSION['profile'])){
-            $this->attributes['img_preview'] = $_SESSION['profile'];
-            unset($_SESSION['profile']);
-        }
-    }
-
-    public function saveGallery($id){
-        if (!empty($_SESSION['gallery'])){
-            $sql_paste = '';
-            foreach ($_SESSION['gallery'] as $value){
-                $sql_paste .= "($id, '$value'),";
-            }
-            $sql_paste = rtrim($sql_paste, ',');
-            \R::exec("INSERT INTO gallery (category_id, src) VALUES $sql_paste");
-            unset($_SESSION['gallery']);
-        }
-    }
-
-    public function uploadImg($name, $wmax, $hmax){
-        $uploaddir = WWW . '/upload/';
-        $ext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $_FILES[$name]['name'])); // расширение картинки
-        $types = array("image/gif", "image/png", "image/jpeg", "image/pjpeg", "image/x-png"); // массив допустимых расширений
-        if($_FILES[$name]['size'] > 5048576){
-            $res = array("error" => "Error! Max size of file - 1 Мб!");
-            exit(json_encode($res));
-        }
-        if($_FILES[$name]['error']){
-            $res = array("error" => "Error!. Maybe file's size very big!");
-            exit(json_encode($res));
-        }
-        if(!in_array($_FILES[$name]['type'], $types)){
-            $res = array("error" => "Enable extensions are:  .gif, .jpg, .png");
-            exit(json_encode($res));
-        }
-        $new_name = md5(time()).".$ext";
-        $uploadfile = $uploaddir.$new_name;
-        if(@move_uploaded_file($_FILES[$name]['tmp_name'], $uploadfile)){
-            if($name == 'banner'){
-                $_SESSION['banner'] = $new_name;
-            }
-            if ($name == 'profile'){
-                $_SESSION['profile'] = $new_name;
-            }
-            self::resize($uploadfile, $uploadfile, $wmax, $hmax, $ext);
-            $res = array("file" => $new_name);
-            exit(json_encode($res));
-        }
-    }
 
     public function editImg($id ,$name, $wmax, $hmax){
         $uploaddir = WWW . '/upload/';

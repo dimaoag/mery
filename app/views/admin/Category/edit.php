@@ -36,14 +36,13 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
-                                    <h4 class="text-danger">Фото баннера и мини фото курса менять одновремено!</h4>
                                     <div class="col-md-6">
                                         <div class="box box-danger box-solid file-upload">
                                             <div class="box-header">
                                                 <h3 class="box-title">Баннер</h3>
                                             </div>
                                             <div class="box-body">
-                                                <div id="banner" class="btn btn-success" data-url="/category/add-image" data-name="banner">
+                                                <div id="banner" class="btn btn-success" data-url="/category/add-image" data-name="banner" data-act="edit" data-id="<?=$category->id;?>">
                                                     Выберите изображение
                                                 </div>
                                                 <p>
@@ -71,7 +70,7 @@
                                                 <h3 class="box-title">Мини фото курса</h3>
                                             </div>
                                             <div class="box-body">
-                                                <div id="profile" class="btn btn-success" data-url="/category/add-image" data-name="profile">
+                                                <div id="profile" class="btn btn-success" data-url="/category/add-image" data-name="profile" data-act="edit" data-id="<?=$category->id;?>">
                                                     Выберите изображение
                                                 </div>
                                                 <p>
@@ -86,38 +85,6 @@
                                                     <img src="/upload/<?=$category->img_preview;?>" alt="image" class="img-profile del-img"
                                                          data-type="profile" data-id="<?=$category->id;?>" data-src="<?=$category->img_preview;?>"
                                                          style="width: 150px">
-                                                </div>
-                                            </div>
-                                            <div class="overlay">
-                                                <i class="fa fa-refresh fa-spin"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="box box-primary box-solid file-upload">
-                                            <div class="box-header">
-                                                <h3 class="box-title">Галерея с изображениями работ</h3>
-                                            </div>
-                                            <div class="box-body">
-                                                <div id="gallery" class="btn btn-success" data-url="/category/add-image" data-name="gallery">
-                                                    Выберите изображение
-                                                </div>
-                                                <p>
-                                                    <small>
-                                                        Recommended size:
-                                                        <?=\mery\App::$app->getProperty('gallery_with'); ?>
-                                                        x
-                                                        <?=\mery\App::$app->getProperty('gallery_height'); ?>
-                                                    </small>
-                                                </p>
-                                                <div class="gallery">
-                                                    <?php if (!empty($gallery)):?>
-                                                        <?php foreach ($gallery as $item): ?>
-                                                            <img src="/upload/<?=$item;?>" alt="image" class="img-gallery del-img"
-                                                                 data-id="<?=$category->id;?>" data-src="<?=$item;?>" data-type="gallery"
-                                                            style="margin: 5px">
-                                                        <?php  endforeach;?>
-                                                    <?php endif;?>
                                                 </div>
                                             </div>
                                             <div class="overlay">
@@ -141,7 +108,6 @@
                                     <!--                                    </div>-->
                                 </div>
                             </form>
-                            <?php if (isset($_SESSION['form_data'])) unset($_SESSION['form_data']); ?>
                         </div>
                     </div>
 

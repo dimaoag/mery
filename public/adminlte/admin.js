@@ -54,14 +54,17 @@ $('.sidebar-menu a').each(function () {
 if ($('div').is('#banner')){
     var buttonBanner = $('#banner'),
         buttonProfile = $('#profile'),
-        buttonGallery = $('#gallery'),
         file;
 }
 
 if (buttonBanner){
     new AjaxUpload(buttonBanner, {
         action: adminPath + buttonBanner.data('url') + "?upload=1",
-        data: {name: buttonBanner.data('name')},
+        data: {
+            name: buttonBanner.data('name'),
+            act: buttonBanner.data('act'),
+            id: buttonBanner.data('id')
+        },
         name: buttonBanner.data('name'), //параметр
         onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
             if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
@@ -87,7 +90,11 @@ if (buttonBanner){
 if (buttonProfile){
     new AjaxUpload(buttonProfile, {
         action: adminPath + buttonProfile.data('url') + "?upload=1",
-        data: {name: buttonProfile.data('name')},
+        data: {
+            name: buttonProfile.data('name'),
+            act: buttonProfile.data('act'),
+            id: buttonProfile.data('id')
+        },
         name: buttonProfile.data('name'), //параметр
         onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
             if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
@@ -108,31 +115,6 @@ if (buttonProfile){
         }
     });
 }
-
-
-// if (buttonGallery){
-//     new AjaxUpload(buttonGallery, {
-//         action: adminPath + buttonGallery.data('url') + "?upload=1",
-//         data: {name: buttonGallery.data('name')},
-//         name: buttonGallery.data('name'),
-//         onSubmit: function (file, ext) {
-//             if (!(ext && /^(jpg|png|jpeg|gif)$/i.test(ext))) {
-//                 alert('Ошибка! Разрешены только картинки');
-//                 return false;
-//             }
-//             buttonGallery.closest('.file-upload').find('.overlay').css({'display': 'block'});
-//
-//         },
-//         onComplete: function (file, response) {
-//             setTimeout(function () {
-//                 buttonGallery.closest('.file-upload').find('.overlay').css({'display': 'none'});
-//
-//                 response = JSON.parse(response);
-//                 $('.gallery').append('<img src="/upload/' + response.file + '" style="max-height: 100px;">');
-//             }, 1000);
-//         }
-//     });
-// }
 
 
 //upload images

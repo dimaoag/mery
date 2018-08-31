@@ -41,7 +41,7 @@
                                                 <h3 class="box-title">Баннер</h3>
                                             </div>
                                             <div class="box-body">
-                                                <div id="banner" class="btn btn-success" data-url="/category/add-image" data-name="banner">
+                                                <div id="banner" class="btn btn-success" data-url="/category/add-image" data-name="banner" data-act="add" data-id="0">
                                                     Выберите изображение
                                                 </div>
                                                 <p>
@@ -65,7 +65,7 @@
                                                 <h3 class="box-title">Мини фото курса</h3>
                                             </div>
                                             <div class="box-body">
-                                                <div id="profile" class="btn btn-success" data-url="/category/add-image" data-name="profile">
+                                                <div id="profile" class="btn btn-success" data-url="/category/add-image" data-name="profile" data-act="add" data-id="0">
                                                     Выберите изображение
                                                 </div>
                                                 <p>
@@ -77,30 +77,6 @@
                                                     </small>
                                                 </p>
                                                 <div class="profile"></div>
-                                            </div>
-                                            <div class="overlay">
-                                                <i class="fa fa-refresh fa-spin"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="box box-primary box-solid file-upload">
-                                            <div class="box-header">
-                                                <h3 class="box-title">Галерея с изображениями работ</h3>
-                                            </div>
-                                            <div class="box-body">
-                                                <div id="gallery" class="btn btn-success" data-url="/category/add-image" data-name="gallery">
-                                                    Выберите изображение
-                                                </div>
-                                                <p>
-                                                    <small>
-                                                        Recommended size:
-                                                        <?=\mery\App::$app->getProperty('gallery_with'); ?>
-                                                        x
-                                                        <?=\mery\App::$app->getProperty('gallery_height'); ?>
-                                                    </small>
-                                                </p>
-                                                <div class="gallery"></div>
                                             </div>
                                             <div class="overlay">
                                                 <i class="fa fa-refresh fa-spin"></i>

@@ -2,6 +2,7 @@
 namespace app\controllers\admin;
 
 use app\models\admin\Category;
+use app\models\admin\CategoryEdit;
 use mery\App;
 use app\models\AppModel;
 use mery\libs\Pagination;
@@ -42,27 +43,20 @@ class CategoryController extends AdminController {
                 \R::store($cat);
                 $_SESSION['success'] =  'Категория курсов создана!';
             }
-            redirect();
+            redirect(ADMIN. '/category');
         }
         $this->setMeta('Создать новою категорию курсов');
     }
 
 
     public function editAction(){
-//        unset($_SESSION['gal']);
         if (!empty($_POST)) {
-//            debug($_SESSION ,1);
             $id = $this->getRequestId(false);
-            $category = new Category();
+            $category = new CategoryEdit();
             $data = $_POST;
             $category->load($data);
             $category->attributes['status'] = $category->attributes['status'] ? '1' : '0';
             $category->attributes['menu_id'] = '2';
-            if (isset($_SESSION['gal']) && $_SESSION['gal'] != 1){
-                $category->getImgBanner();
-                $category->getImgProfile();
-                unset($_SESSION['gal']);
-            }
             if (!$category->validate($data)){
                 $category->getErrors();
                 redirect();
@@ -72,7 +66,6 @@ class CategoryController extends AdminController {
                 $cat = \R::load('category', $id);
                 $cat->alias = $alias;
                 \R::store($cat);
-                $category->saveGallery($id);
                 $_SESSION['success'] =  'Изменения сохранены!';
             }
             redirect();
@@ -114,8 +107,15 @@ class CategoryController extends AdminController {
                 $wmax = App::$app->getProperty('banner_width');
                 $hmax = App::$app->getProperty('banner_height');
                 $name = $_POST['name'];
+                $act = $_POST['act'];
+                $id = $_POST['id'];
                 $category = new Category();
-                $category->uploadImg($name, $wmax, $hmax);
+                if ($act=='edit' && $id != '0'){
+                    $category->editImg($id,$name, $wmax, $hmax);
+                } else {
+                    $category->uploadImg($name, $wmax, $hmax);
+                }
+
 
             }
             if ($_POST['name'] == 'profile'){
@@ -123,17 +123,14 @@ class CategoryController extends AdminController {
                 $wmax = App::$app->getProperty('preview_width');
                 $hmax = App::$app->getProperty('preview_height');
                 $name = $_POST['name'];
+                $act = $_POST['act'];
+                $id = $_POST['id'];
                 $category = new Category();
-                $category->uploadImg($name, $wmax, $hmax);
-
-            }
-            if ($_POST['name'] == 'gallery') {
-                //gallery
-                $wmax = App::$app->getProperty('gallery_with');
-                $hmax = App::$app->getProperty('gallery_height');
-                $name = $_POST['name'];
-                $category = new Category();
-                $category->uploadImg($name, $wmax, $hmax);
+                if ($act=='edit' && $id != '0'){
+                    $category->editImg($id,$name, $wmax, $hmax);
+                } else {
+                    $category->uploadImg($name, $wmax, $hmax);
+                }
 
             }
         }
@@ -145,23 +142,14 @@ class CategoryController extends AdminController {
         $src = isset($_POST['src']) ? $_POST['src'] : null;
         $type = isset($_POST['type']) ? $_POST['type'] : null;
         if (!$id || !$src || !$type) return false;
-        if ($type == 'gallery'){
-            if (\R::exec("DELETE FROM gallery WHERE category_id = ? AND src = ?", [$id, $src])){
-                @unlink(WWW . '/upload/'. $src);
-                $_SESSION['gal'] = '1';
-                exit('1');
-            }
-        }
         if ($type == 'banner' && $src != 'no_image.jpg') {
             @unlink(WWW . '/upload/' . $src);
-            \R::exec("UPDATE `category` SET banner = 'no_image.jpg' WHERE id = ? AND banner = ?", [$id, $src]);
-            $_SESSION['ban'] = '1';
+            \R::exec("UPDATE `category` SET banner = 'no_image.jpg' WHERE id = ?", [$id]);
             exit('1');
         }
         if ($type == 'profile' && $src != 'no_image.jpg') {
             @unlink(WWW . '/upload/' . $src);
-            \R::exec("UPDATE `category` SET img_preview = 'no_image.jpg' WHERE id = ? AND img_preview = ?", [$id, $src]);
-            $_SESSION['prof'] = '1';
+            \R::exec("UPDATE `category` SET img_preview = 'no_image.jpg' WHERE id = ?", [$id]);
             exit('1');
         }
         if ($type == 'banner') {

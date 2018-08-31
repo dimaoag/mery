@@ -6961,3 +6961,6 @@
 [2018-08-30 18:13:08] Text error: Class 'app\controllers\admin\App' not found | File: /var/www/mery/app/controllers/admin/GalleryController.php | Line: 23 
         
 ====================='=
+[2018-08-31 06:51:45] Text error: View /var/www/mery/app/views/admin/Category/delete-image.php not found | File: /var/www/mery/vendor/mery/core/base/View.php | Line: 60 
+        
+====================='=

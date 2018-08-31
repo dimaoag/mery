@@ -1,8 +1,7 @@
 <section class="content-header">
-    <h1>Типы курса</h1>
+    <h1>Мастера</h1>
     <ol class="breadcrumb">
         <li><a href="<?=ADMIN?>"><i class="fa fa-dashboard"></i>Главная</a></li>
-        <li><a href="<?=ADMIN?>/category"><i class="fa fa-dashboard"></i>Категории курсов</a></li>
     </ol>
 </section>
 
@@ -12,30 +11,28 @@
             <div class="box">
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <a href="<?=ADMIN?>/course-type/add" class="btn btn-success">Добавить новый тип курса</a>
+                    <a href="<?=ADMIN?>/master/add" class="btn btn-success">Добавить нового мастера</a>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Название</th>
+                                <th>ФИО</th>
                                 <th>Категория</th>
-                                <th>Вид курса</th>
-                                <th>Цена</th>
+                                <th>Посада</th>
                                 <th>Действие</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($type_courses as $type_course):?>
+                            <?php foreach ($masters as $key => $master):?>
                                 <tr>
-                                    <td><?=$type_course['name'];?></td>
-                                    <td><?=$type_course['cat_name'];?></td>
-                                    <td><?=$type_course['kind_name'];?></td>
-                                    <td><?=$type_course['price'];?></td>
+                                    <td><?=$master['first_name'];?> <?=$master['last_name'];?></td>
+                                    <td><?=$master['name'];?></td>
+                                    <td><?=$master['position'];?></td>
                                     <td>
-                                        <a href="<?=ADMIN?>/course-type/edit?id=<?=$type_course['id'];?>">
+                                        <a href="<?=ADMIN?>/master/edit?id=<?=$master['id'];?>">
                                             <i class="fa fa-fw fa-edit"></i>
                                         </a>
-                                        <a href="<?=ADMIN?>/course-type/delete?id=<?=$type_course['id'];?>">
+                                        <a href="<?=ADMIN?>/master/delete?id=<?=$master['id'];?>">
                                             <i class="fa fa-fw fa-trash delete text-danger"></i>
                                         </a>
                                     </td>
@@ -43,12 +40,6 @@
                             <?php endforeach;?>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="text-content">
-                        <p><?=count($type_courses);?> типов курс(ов) с <?=$count?></p>
-                        <?php if ($pagination->getCountPages() > 1):?>
-                            <?=$pagination?>
-                        <?php endif; ?>
                     </div>
                 </div>
                 <!-- /.box-body -->

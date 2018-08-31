@@ -2,6 +2,7 @@
 namespace app\controllers\admin;
 
 use app\models\CourseOrder;
+use mery\libs\Pagination;
 
 class OrderController extends AdminController {
 
@@ -19,12 +20,17 @@ class OrderController extends AdminController {
 
     public function showAction(){
         $id = (int)$this->getRequestId();
+        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+        $perpage = 50;
+        $count = \R::count('course_order', 'status = ?',[$id]);
+        $pagination = new Pagination($page, $perpage, $count);
+        $start = $pagination->getStart();
         $statuses = getStatus();
         $status = $statuses[$id];
-        $orders = \R::getAll('SELECT course_order.*, course.name, course.date_start, course.date_end FROM course_order JOIN course ON course_order.course_id = course.id WHERE course_order.status = ? ORDER BY course_order.created_at DESC', [$id]);
+        $orders = \R::getAll("SELECT course_order.*, course.name, course.date_start, course.date_end FROM course_order JOIN course ON course_order.course_id = course.id WHERE course_order.status = ? ORDER BY course_order.created_at DESC LIMIT $start, $perpage", [$id]);
 
         $this->setMeta("Заявки по статусу {$status}");
-        $this->setData(compact('orders', 'status', 'statuses'));
+        $this->setData(compact('orders', 'status', 'statuses', 'pagination', 'count'));
     }
 
 

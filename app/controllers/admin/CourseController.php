@@ -4,6 +4,7 @@ namespace app\controllers\admin;
 
 use app\models\admin\Course;
 use mery\App;
+use mery\libs\Pagination;
 
 
 class CourseController extends AdminController {
@@ -11,10 +12,15 @@ class CourseController extends AdminController {
 
     public function indexAction(){
 
-        $courses = \R::getAll('SELECT course.*, category.name AS cat_name, course_kind.name AS kind_name, course_type.name AS type_name, master.first_name, master.last_name FROM course JOIN category ON course.category_id = category.id JOIN course_kind ON course.kind_id = course_kind.id JOIN course_type ON course.type_id = course_type.id JOIN master ON course.master_id = master.id ORDER BY course.date_start DESC');
+        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+        $perpage = 50;
+        $count = \R::count('course');
+        $pagination = new Pagination($page, $perpage, $count);
+        $start = $pagination->getStart();
+        $courses = \R::getAll("SELECT course.*, category.name AS cat_name, course_kind.name AS kind_name, course_type.name AS type_name, master.first_name, master.last_name FROM course JOIN category ON course.category_id = category.id JOIN course_kind ON course.kind_id = course_kind.id JOIN course_type ON course.type_id = course_type.id JOIN master ON course.master_id = master.id ORDER BY course.date_start DESC LIMIT $start, $perpage");
 
         $this->setMeta('Все курсы');
-        $this->setData(compact('courses'));
+        $this->setData(compact('courses','pagination', 'count'));
     }
 
 

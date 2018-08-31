@@ -3,12 +3,19 @@ namespace app\controllers\admin;
 
 
 
+use mery\libs\Pagination;
+
 class CourseKindController extends AdminController {
 
     public function indexAction(){
-        $kind_courses = \R::getAll("SELECT course_kind.*, category.name as cat_name FROM course_kind JOIN category ON course_kind.category_id = category.id ORDER BY course_kind.category_id DESC");
+        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+        $perpage = 50;
+        $count = \R::count('course_kind');
+        $pagination = new Pagination($page, $perpage, $count);
+        $start = $pagination->getStart();
+        $kind_courses = \R::getAll("SELECT course_kind.*, category.name as cat_name FROM course_kind JOIN category ON course_kind.category_id = category.id ORDER BY course_kind.category_id DESC LIMIT $start, $perpage");
         $this->setMeta('Виды курсов');
-        $this->setData(compact('kind_courses'));
+        $this->setData(compact('kind_courses', 'pagination', 'count'));
     }
 
 

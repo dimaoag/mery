@@ -4,15 +4,21 @@ namespace app\controllers\admin;
 
 
 use app\models\admin\CourseType;
+use mery\libs\Pagination;
 
 class CourseTypeController extends AdminController {
 
 
 
     public function indexAction(){
-        $type_courses = \R::getAll('SELECT course_type.*, category.name AS cat_name, course_kind.name AS kind_name FROM course_type JOIN category ON course_type.category_id = category.id JOIN course_kind ON course_type.kind_id = course_kind.id ORDER BY course_type.category_id DESC');
+        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+        $perpage = 50;
+        $count = \R::count('course_type');
+        $pagination = new Pagination($page, $perpage, $count);
+        $start = $pagination->getStart();
+        $type_courses = \R::getAll("SELECT course_type.*, category.name AS cat_name, course_kind.name AS kind_name FROM course_type JOIN category ON course_type.category_id = category.id JOIN course_kind ON course_type.kind_id = course_kind.id ORDER BY course_type.category_id DESC LIMIT $start, $perpage");
         $this->setMeta('Типы курсов');
-        $this->setData(compact('type_courses'));
+        $this->setData(compact('type_courses', 'pagination', 'count'));
     }
 
 

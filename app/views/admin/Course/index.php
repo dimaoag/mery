@@ -58,6 +58,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="text-content">
+                        <p><?=count($courses);?> курс(ов) с <?=$count?></p>
+                        <?php if ($pagination->getCountPages() > 1):?>
+                            <?=$pagination?>
+                        <?php endif; ?>
+                    </div>
                 </div>
                 <!-- /.box-body -->
             </div>

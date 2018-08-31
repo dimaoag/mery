@@ -122,3 +122,12 @@ function getStatusCourse(){
     ];
     return $arr;
 }
+
+
+function getStatusCarousel(){
+    $arr = [
+        '1' => 'Показывать',
+        '0' => 'Не показывать',
+    ];
+    return $arr;
+}

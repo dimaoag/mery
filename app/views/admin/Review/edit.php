@@ -9,16 +9,14 @@
 
 <section class="content">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-7">
             <div class="box">
                 <form action="<?=ADMIN?>/review/edit" method="post" data-toggle="validator">
                     <div class="box-body">
                         <input type="hidden" name="user_id" value="<?= $review->user_id;?>">
                         <div class="form-group has-feedback">
                             <label for="text">Текст</label>
-                            <input type="text" class="form-control" name="text" id="text"
-                                   value="<?=h($review->text)?>"
-                                   required>
+                            <textarea class="form-control" name="text" id="text" cols="30" rows="10" required><?=h($review->text)?></textarea>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             <div class="help-block with-errors"></div>
                         </div>

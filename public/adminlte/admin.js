@@ -359,6 +359,73 @@ $('.del-img-course').on('click', function () {
 });
 
 
+//upload images
+if ($('div').is('#car')){
+    var buttonCar = $('#car'),
+        file;
+}
+
+if (buttonCar){
+    new AjaxUpload(buttonCar, {
+        action: adminPath + buttonCar.data('url') + "?upload=1",
+        data: {name: buttonCar.data('name')},
+        name: buttonCar.data('name'), //параметр
+        onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
+            if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
+                alert('Error! Allowed only images.');
+                return false;
+            }
+            buttonCar.closest('.file-upload').find('.overlay').css({'display':'block'});
+            //первый предок (родитель с класом .file-upload) >  ищеи .find('.overlay') и показуем спинер
+
+        },
+        onComplete: function(file, response){ // по завершению аякс запроса
+            setTimeout(function(){ // чтобы лоадер (спинер) дольше покрутился
+                buttonCar.closest('.file-upload').find('.overlay').css({'display':'none'});
+
+                response = JSON.parse(response);
+                $('.car').html('<img src="/upload/' + response.file + '" style="max-height: 100px;">');
+            }, 1000);
+        }
+    });
+}
+
+//delete images from  product
+$('.del-img-car').on('click', function () {
+    var res = confirm('Вы действительно хотите удалить фото?');
+    if (!res) return false;
+
+    var this_img = $(this),
+        id = this_img.data('id'),
+        src = this_img.data('src'),
+        type = this_img.data('type');
+
+    $.ajax({
+        url: adminPath + '/carousel/delete-image',
+        data: {id: id, src: src, type: type},
+        type: 'post',
+        beforeSend: function () {
+            this_img.closest('.file-upload').find('.overlay').css({'display': 'block'});
+        },
+        success: function (res) {
+            setTimeout(function () {
+                this_img.closest('.file-upload').find('.overlay').css({'display': 'none'});
+                if (res == 1){
+                    this_img.fadeOut();
+                }
+            }, 1000);
+        },
+        error: function () {
+            setTimeout(function () {
+                this_img.closest('.file-upload').find('.overlay').css({'display': 'none'});
+                alert('Error!')
+            }, 1000);
+        },
+    });
+
+});
+
+
 
 //create modification product
 var modList = [];

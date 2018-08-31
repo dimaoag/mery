@@ -253,6 +253,7 @@ $('.datepicker').datepicker({
     changeYear: true,
     changeMonth: true,
     todayHighlight: true,
+    autoclose: true
 });
 
 

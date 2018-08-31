@@ -13,7 +13,7 @@
                 <div class="box-body">
                     <div class="register-main">
                         <div class="col-md-6 account-left">
-                            <form method="post" action="<?=ADMIN?>/course/add" data-toggle="validator" role="form">
+                            <form method="post" action="<?=ADMIN?>/course/add" data-toggle="validator" role="form" autocomplete="off">
                                 <div class="form-group has-feedback">
                                     <label for="date_start">Дата начала курса</label>
                                     <input type="text" name="date_start" class="form-control datepicker" id="date_start"

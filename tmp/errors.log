@@ -6964,3 +6964,21 @@
 [2018-08-31 06:51:45] Text error: View /var/www/mery/app/views/admin/Category/delete-image.php not found | File: /var/www/mery/vendor/mery/core/base/View.php | Line: 60 
         
 ====================='=
+[2018-08-31 07:19:26] Text error: Page not found | File: /var/www/mery/app/controllers/admin/AdminController.php | Line: 29 
+        
+====================='=
+[2018-08-31 07:30:02] Text error: Action app\controllers\admin\OrderController::showAction not found | File: /var/www/mery/vendor/mery/core/Router.php | Line: 51 
+        
+====================='=
+[2018-08-31 07:51:22] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-31 07:51:38] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-08-31 08:02:39] Text error: syntax error, unexpected '<', expecting end of file | File: /var/www/mery/app/views/admin/Order/index.php | Line: 2 
+        
+====================='=
+[2018-08-31 08:36:56] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'review.is_show' in 'where clause' | File: /var/www/mery/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

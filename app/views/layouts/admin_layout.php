@@ -22,15 +22,15 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
 
-
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 
     <link rel="stylesheet" href="admin.css">
     <!-- Morris chart -->
 <!--    <link rel="stylesheet" href="bower_components/morris.js/morris.css">-->
     <!-- jvectormap -->
 <!--    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">-->
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+
     <!-- Daterange picker -->
 <!--    <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">-->
     <!-- bootstrap wysihtml5 - text editor -->
@@ -39,12 +39,12 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+<!--    <![endif]-->
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -125,18 +125,6 @@
                     <?php endif; ?>
                 </div>
             </div>
-            <!-- search form -->
-<!--            <form action="#" method="get" class="sidebar-form">-->
-<!--                <div class="input-group">-->
-<!--                    <input type="text" name="q" class="form-control" placeholder="Search...">-->
-<!--                    <span class="input-group-btn">-->
-<!--                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>-->
-<!--                </button>-->
-<!--              </span>-->
-<!--                </div>-->
-<!--            </form>-->
-            <!-- /.search form -->
-            <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
                 <li data-widget="tree">
@@ -176,16 +164,28 @@
                         </span>
                     </a>
                     <ul class="treeview-menu" data-widget="tree">
-                        <li><a href="<?=ADMIN?>/course">Все курсы</a></li>
+                        <li><a href="<?=ADMIN?>/course">Все курсы по датам</a></li>
                         <li><a href="<?=ADMIN?>/course-kind">Виды курсов</a></li>
                         <li><a href="<?=ADMIN?>/course-type">Типы курсов</a></li>
                         <li><a href="<?=ADMIN?>/course/add">Создать курс</a></li>
                     </ul>
                 </li>
-                <li data-widget="tree">
-                    <a href="<?=ADMIN?>/order">
-                        <i class="fa fa-shopping-bag"></i><span>Заявки</span>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span>Заявки по статусу</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
+                    <ul class="treeview-menu" data-widget="tree">
+                        <?php $statuses = getStatus(); ?>
+                        <?php if ($statuses): ?>
+                            <?php foreach ($statuses as $key => $value): ?>
+                                <li><a href="<?=ADMIN?>/order/show?id=<?=$key;?>"><?=$value;?></a></li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </ul>
                 </li>
                 <li>
                     <a href="<?=ADMIN?>/cache">

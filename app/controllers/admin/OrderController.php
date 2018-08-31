@@ -17,6 +17,17 @@ class OrderController extends AdminController {
     }
 
 
+    public function showAction(){
+        $id = (int)$this->getRequestId();
+        $statuses = getStatus();
+        $status = $statuses[$id];
+        $orders = \R::getAll('SELECT course_order.*, course.name, course.date_start, course.date_end FROM course_order JOIN course ON course_order.course_id = course.id WHERE course_order.status = ? ORDER BY course_order.created_at DESC', [$id]);
+
+        $this->setMeta("Заявки по статусу {$status}");
+        $this->setData(compact('orders', 'status', 'statuses'));
+    }
+
+
     public function addAction(){
         if (!empty($_POST)){
             $order = new CourseOrder();
@@ -88,6 +99,8 @@ class OrderController extends AdminController {
         $this->setMeta('Записать клиента на дату');
         $this->setData(compact('order'));
     }
+
+
 
 
 

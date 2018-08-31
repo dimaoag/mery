@@ -13,7 +13,7 @@
                 <div class="box-body">
                     <div class="register-main">
                         <div class="col-md-6 account-left">
-                            <form method="post" action="<?=ADMIN?>/course/edit" data-toggle="validator" role="form">
+                            <form method="post" action="<?=ADMIN?>/course/edit" data-toggle="validator" role="form" autocomplete="off">
                                 <div class="form-group has-feedback">
                                     <label for="date_start">Дата начала курса</label>
                                     <input type="text" name="date_start" class="form-control datepicker" id="date_start"
@@ -102,6 +102,21 @@
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
+                                <div class="form-group has-feedback">
+                                    <label for="status">Статус</label>
+                                    <select class="form-control" id="status" name="status" required>
+                                        <?php $corseStatuses = getStatusCourse(); ?>
+                                        <?php if ($corseStatuses):?>
+                                            <?php foreach ($corseStatuses as $key => $corseStatuse): ?>
+                                                <?php if ($key == $course[0]['status']):?>
+                                                    <option value="<?=$key?>" selected><?=$corseStatuse?></option>
+                                                <?php else: ?>
+                                                    <option value="<?=$key?>"><?=$corseStatuse?></option>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    </select>
+                                </div>
                                 <input type="hidden" name="id" value="<?=$course[0]['id'];?>">
                                 <div class="form-group">
                                     <!--                                    <div class="box-footer">-->

@@ -1,8 +1,7 @@
 <section class="content-header">
-    <h4>Все заявки по курсу "<?=$course->name;?>" c <?=dateFormat($course->date_start);?> по <?=dateFormat($course->date_end);?></h4>
+    <h1>Все заявки по статусу "<?=$status;?>"</h1>
     <ol class="breadcrumb">
         <li><a href="<?=ADMIN?>"><i class="fa fa-dashboard"></i>Главная</a></li>
-        <li><a href="<?=ADMIN?>/course"><i class="fa fa-dashboard"></i>Курсы по датам</a></li>
     </ol>
 </section>
 <section class="content">
@@ -11,19 +10,19 @@
             <div class="box">
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <a href="<?=ADMIN?>/order/add?id=<?=$course->id;?>" class="btn btn-success">Записать клиента на курс</a>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead>
-                                <tr>
-                                    <th>Дата записи</th>
-                                    <th>Названия курса</th>
-                                    <th>Клиент</th>
-                                    <th>Телефон</th>
-                                    <th>Цена</th>
-                                    <th>Статус</th>
-                                    <th>Действия</th>
-                                </tr>
+                            <tr>
+                                <th>Дата записи</th>
+                                <th>Клиент</th>
+                                <th>Названия курса</th>
+                                <th>Дата курса</th>
+                                <th>Телефон</th>
+                                <th>Цена</th>
+                                <th>Статус</th>
+                                <th>Действия</th>
+                            </tr>
                             </thead>
                             <tbody>
                             <?php $statuses = getStatus(); ?>
@@ -31,8 +30,9 @@
                                 <?php foreach ($orders as $key => $order):?>
                                     <tr>
                                         <td><?=echoDate($order['created_at'], true);?></td>
-                                        <td><?=$course->name;?></td>
                                         <td><?=$order['first_name'];?> <?=$order['last_name'];?></td>
+                                        <td><?=$order['name'];?></td>
+                                        <td><?=dateFormat($order['date_start']);?> - <?=dateFormat($order['date_end']);?></td>
                                         <td><?=$order['phone'];?></td>
                                         <td><?=$order['price'];?></td>
                                         <td><?=$statuses[$order['status']];?></td>

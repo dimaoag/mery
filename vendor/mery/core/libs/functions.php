@@ -113,3 +113,12 @@ function getStatus(){
     ];
     return $arr;
 }
+
+
+function getStatusCourse(){
+    $arr = [
+        '1' => 'Действующий',
+        '0' => 'Закрытый',
+    ];
+    return $arr;
+}

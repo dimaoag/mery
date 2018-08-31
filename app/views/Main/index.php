@@ -16,7 +16,7 @@
                             <?php foreach ($carousel as $item): ?>
                                 <div class="carousel-item <?= ($i==1) ? ' active' : '' ?>">
                                     <a href="/category/<?=$item->category_id;?>">
-                                        <img class="d-block w-100" src="images/<?=$item->src;?>" alt="">
+                                        <img class="d-block w-100" src="upload/<?=$item->src;?>" alt="">
                                     </a>
                                 </div>
                             <?php $i++; ?>
@@ -86,7 +86,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <a href="#">
-                            <img class="card-img-top" src="images/<?= h($article->img); ?>" alt="<?= h($article->img); ?>">
+                            <img class="card-img-top" src="upload/<?= h($article->img); ?>" alt="<?= h($article->img); ?>">
                         </a>
                         <div class="card-body index-card-body">
                             <h5 class="card-title index-card-title"><?= h($article->title); ?></h5>
@@ -165,7 +165,7 @@
     <section class="reviews-container">
         <div class="row">
             <div class="col-12 carousel-index">
-                <?php if ($reviews): ?>
+                <?php if (!empty($reviews)): ?>
                     <div class="owl-carousel reviews owl-carousel-index">
                         <?php foreach ($reviews as $review): ?>
                             <div class="review">

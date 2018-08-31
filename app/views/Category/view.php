@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="course-banner">
-                <img src="images/<?=h($category->banner);?>" alt="course-banner">
+                <img src="upload/<?=h($category->banner);?>" alt="course-banner">
             </div>
         </div>
     </div>

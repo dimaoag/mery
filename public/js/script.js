@@ -255,7 +255,6 @@ $('.order-modal').on('click', '.close_modal', function (e) {
 });
 
 
-
 // search
 var categories = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.whitespace,

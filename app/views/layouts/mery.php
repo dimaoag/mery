@@ -39,7 +39,7 @@
         <div class="left-sidebar">
             <aside class="sidebar">
                 <div class="logo">
-                    <a href="#">
+                    <a href="/">
                         <img src="images/logo.png">
                     </a>
                 </div>
@@ -59,7 +59,7 @@
                                 </a>
                                 <div class="auth">
                                     <?php if (!empty($_SESSION['user'])): ?>
-                                        <a href="<?=PATH;?>/user/cabinet" class="signup mr-2"><?=h($_SESSION['user']['first_name']);?></a>
+                                        <a href="<?=PATH;?>/user/cabinet" class="signup mr-2"><?=$_SESSION['user']['first_name']?> <?=$_SESSION['user']['last_name']?></a>
                                         <a href="<?=PATH;?>/user/logout">
                                             <i class="fa fa-sign-out" aria-hidden="true"></i>
                                         </a>
@@ -99,7 +99,7 @@
                                 <div class="burger header-flex-item header-flex-item-3">
                                     <div class="auth">
                                         <?php if (!empty($_SESSION['user'])): ?>
-                                            <a href="<?=PATH;?>/user/cabinet" class="signup mr-2"><?=h($_SESSION['user']['first_name']);?></a>
+                                            <a href="<?=PATH;?>/user/cabinet" class="signup mr-2"><?=$_SESSION['user']['first_name']?> <?=$_SESSION['user']['last_name']?></a>
                                             <a href="<?=PATH;?>/user/logout">
                                                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                                             </a>
@@ -150,7 +150,7 @@
             <div class="row footer-container">
                 <div class="col-lg-2 footer-item">
                     <div class="logo-footer footer-poss">
-                        <a href="#">
+                        <a href="/">
                             <img src="images/logo_white.png" alt="image">
                         </a>
                     </div>

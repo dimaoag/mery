@@ -30,15 +30,15 @@
         <div class="col-lg-4 mb-3">
             <div class="card h-100">
                 <a href="/category/<?=h($category->id);?>">
-                    <img class="card-img-top" src="images/<?=h($category->img_preview);?>" alt="<?=h($category->img_preview);?>">
+                    <img class="card-img-top" src="upload/<?=h($category->img_preview);?>" alt="<?=h($category->img_preview);?>">
                 </a>
                 <div class="card-body d-flex flex-column">
                     <div class="cart-info d-flex justify-content-between courses-cart-info">
-                        <p class="card-data">07.01.2018</p>
-                        <div>
-                            <i class="fa fa-comment"></i> 6
-                            <i class="fa fa-heart"></i> 221
-                        </div>
+<!--                        <p class="card-data">07.01.2018</p>-->
+<!--                        <div>-->
+<!--                            <i class="fa fa-comment"></i> 6-->
+<!--                            <i class="fa fa-heart"></i> 221-->
+<!--                        </div>-->
                     </div>
                     <h5 class="card-title text-center coursers-card-title"><?=h($category->name);?></h5>
                     <p class="course-little-desc flex-grow-1"><?=h($category->description);?></p>

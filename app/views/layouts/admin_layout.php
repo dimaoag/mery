@@ -76,7 +76,7 @@
                             <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                             <?php if (!empty($_SESSION['user'])): ?>
                                 <span class="hidden-xs">
-                                    <?=$_SESSION['user']['first_name']?>
+                                    <?=$_SESSION['user']['first_name']?> <?=$_SESSION['user']['last_name']?>
                                 </span>
                             <?php endif; ?>
                         </a>
@@ -86,7 +86,7 @@
                                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                 <p>
                                     <?php if (!empty($_SESSION['user'])): ?>
-                                        <?=$_SESSION['user']['first_name']?>
+                                        <?=$_SESSION['user']['first_name']?> <?=$_SESSION['user']['last_name']?>
                                     <?php endif; ?>
                                 </p>
                             </li>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="pull-left info">
                     <?php if (!empty($_SESSION['user'])): ?>
-                        <p><?=$_SESSION['user']['first_name']?></p>
+                        <p><?=$_SESSION['user']['first_name']?> <?=$_SESSION['user']['last_name']?></p>
                     <?php endif; ?>
                 </div>
             </div>

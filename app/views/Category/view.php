@@ -17,7 +17,7 @@
                 <div class="owl-carousel owl-carousel-course">
                     <?php foreach ($gallery as $item): ?>
                     <div class="course-img">
-                        <img src="images/<?=h($item->src);?>" alt="<?=h($item->src);?>">
+                        <img src="upload/<?=h($item->src);?>" alt="<?=h($item->src);?>">
                     </div>
                     <?php endforeach; ?>
                 </div>

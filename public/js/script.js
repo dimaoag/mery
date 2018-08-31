@@ -253,3 +253,31 @@ $('.order-modal').on('click', '.close_modal', function (e) {
     $.arcticmodal('close');
     location.reload();
 });
+
+
+
+// search
+var categories = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: {
+        wildcard: '%QUERY',
+        url: path + '/search/typeahead?query=%QUERY'
+    }
+});
+
+categories.initialize();
+$('#typeahead').typeahead({
+    highlight: true // подсветка вводимого
+},{
+    name: 'categories',
+    display: 'name', // return id and title showing only title, id as key
+    limit: 9, // 1+ more than items from database;
+    source: categories
+});
+
+// event after clicking founded product
+$('#typeahead').bind('typeahead:select', function (ev, suggestion) {
+    //console.log(suggestion);
+    window.location = path + '/search/?s=' + encodeURIComponent(suggestion.id);
+});

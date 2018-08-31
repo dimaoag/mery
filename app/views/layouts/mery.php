@@ -76,7 +76,7 @@
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <?php new \app\widgets\menu\Menu('menu_header.php');?>
                                     <form class="form-inline my-2 my-lg-0">
-                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                        <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
                                         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                                     </form>
                                 </div>
@@ -91,8 +91,8 @@
                         <div class="col-12">
                             <div class="header">
                                 <div class="search header-flex-item header-flex-item-2">
-                                    <form method="post" class="search-form">
-                                        <input type="text" name="q" class="search_field" placeholder="">
+                                    <form method="post" class="search-form" action="/search" method="get" autocomplete="off">
+                                        <input type="text" name="q" class="search_field" type="search typeahead" id="typeahead" name="s">
                                         <input type="submit" value="" class="search_btn">
                                     </form>
                                 </div>
@@ -218,6 +218,8 @@
 <!--===============================================================================================-->
 
 <script src="js/jquery.waterwheelCarousel.min.js"></script>
+
+<script src="js/typeahead.bundle.js"></script>
 
 <script src="js/main.js"></script>
 

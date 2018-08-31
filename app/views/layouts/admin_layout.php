@@ -132,44 +132,6 @@
                         <i class="fa fa-dashboard"></i><span>Home</span>
                     </a>
                 </li>
-                <li data-widget="tree">
-                    <a href="<?=ADMIN?>/user">
-                        <i class="fa fa-user"></i><span>Пользователи</span>
-                    </a>
-                </li>
-                <li data-widget="tree">
-                    <a href="<?=ADMIN?>/menu">
-                        <i class="fa fa-hdd-o"></i><span>Меню</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-bars"></i>
-                        <span>Категории</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu" data-widget="tree">
-                        <li><a href="<?=ADMIN?>/category">Все категории</a></li>
-                        <li><a href="<?=ADMIN?>/category/add">Добавить новою категорию</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-calendar-check-o"></i>
-                        <span>Курсы</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu" data-widget="tree">
-                        <li><a href="<?=ADMIN?>/course">Все курсы по датам</a></li>
-                        <li><a href="<?=ADMIN?>/course-kind">Виды курсов</a></li>
-                        <li><a href="<?=ADMIN?>/course-type">Типы курсов</a></li>
-                        <li><a href="<?=ADMIN?>/course/add">Создать курс</a></li>
-                    </ul>
-                </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-shopping-bag"></i>
@@ -185,6 +147,44 @@
                                 <li><a href="<?=ADMIN?>/order/show?id=<?=$key;?>"><?=$value;?></a></li>
                             <?php endforeach; ?>
                         <?php endif; ?>
+                    </ul>
+                </li>
+                <li data-widget="tree">
+                    <a href="<?=ADMIN?>/user">
+                        <i class="fa fa-user"></i><span>Пользователи</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                        <span>Категории</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu" data-widget="tree">
+                        <li><a href="<?=ADMIN?>/category">Все категории</a></li>
+                        <li><a href="<?=ADMIN?>/category/add">Добавить новою категорию</a></li>
+                    </ul>
+                </li>
+                <li data-widget="tree">
+                    <a href="<?=ADMIN?>/menu">
+                        <i class="fa fa-hdd-o"></i><span>Меню</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-calendar-check-o"></i>
+                        <span>Курсы</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu" data-widget="tree">
+                        <li><a href="<?=ADMIN?>/course">Все курсы по датам</a></li>
+                        <li><a href="<?=ADMIN?>/course-kind">Виды курсов</a></li>
+                        <li><a href="<?=ADMIN?>/course-type">Типы курсов</a></li>
+                        <li><a href="<?=ADMIN?>/course/add">Создать курс</a></li>
                     </ul>
                 </li>
                 <li>

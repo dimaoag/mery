@@ -40,11 +40,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <span class="fa fa-spinner" aria-hidden="true"></span>sleet</a>
         </h1>
     </div>
-    <h2 class="txt-wthree">error 404</h2>
-    <p>Looks like the page you are trying to visit does not exist
-        <br> Please check the URL and Try again.</p>
+    <h2 class="txt-wthree" style="text-transform: none">Раздел в разроботке</h2>
+    <p>Ошибка 404</p>
     <div class="home">
-        <a href="<?= PATH ?>">home</a>
+        <a href="<?= PATH ?>">Вернуться назад</a>
     </div>
 </div>
 <div class="w3_agile-footer">

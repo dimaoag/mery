@@ -157,7 +157,7 @@
                 </div>
                 <div class="col-lg-2 footer-item">
                     <div class="address footer-poss">
-                        <p>3104 Doctors Drive <br>Los Angeles, California</p>
+                        <p>г. Винница ул. Нансена 7а</p>
                     </div>
                 </div>
                 <div class="col-lg-2 footer-item">
@@ -166,8 +166,9 @@
                             <i class="fa fa-phone" aria-hidden="true"></i>
                         </div>
                         <div class="phones">
-                            <p><a href="tel:0509965687" style="color: white">+3 8050 996 56 87</a></p>
-                            <p><a href="tel:0509965687" style="color: white">+3 8050 996 56 87</a></p>
+                            <p><a href="tel:0638808836" style="color: white">+3 8063 880 88 36</a></p>
+                            <p><a href="tel:0983144266" style="color: white">+3 8098 314 42 66</a></p>
+                            <p><a href="tel:0665390781" style="color: white">+3 8066 539 07 81</a></p>
                         </div>
                     </div>
                 </div>
@@ -176,15 +177,15 @@
                         <div class="email-icon">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </div>
-                        <p>Ejhjfj]@sjkly.net.ua</p>
+                        <p>kurs.meri@gmail.com</p>
                     </div>
                 </div>
                 <div class="col-lg-2 footer-item">
                     <div class="soc footer-poss">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/people/Meri-Meri/100021167183093"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/beauty_kurs_meri/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+<!--                        <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>-->
+                        <a href="https://www.youtube.com/channel/UCNmY6NlST3LHjpxEIAqnY4Q"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>

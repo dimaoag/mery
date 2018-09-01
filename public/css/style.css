@@ -595,7 +595,8 @@ a.courses-all-courses, .courses-all-courses:hover{
     padding: 5px;
     height: 500px;
     border: none;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 /* width */
 .course-textarea::-webkit-scrollbar {

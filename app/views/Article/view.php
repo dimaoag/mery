@@ -29,7 +29,7 @@
                     </div>
                     <input type="hidden" name="article_id" value="<?=$article->id?>">
                     <div class="form-group">
-                        <input type="submit" class="btn btn-block course-btn" value="Оставить коментарий">
+                        <input type="submit" class="btn btn-block course-btn review-btn" value="Оставить коментарий">
                     </div>
                 </form>
                 <span id="comment_message" class="d-block"></span>

@@ -275,17 +275,51 @@ $('.modal-body').on('click', '.add-order', function (e) {
     });
 });
 
+
 //show modal after add order
 
 function showModal() {
     $('.order-modal').arcticmodal();
 }
 
+
 $('.order-modal').on('click', '.close_modal', function (e) {
     e.preventDefault();
     $.arcticmodal('close');
     location.reload();
 });
+
+
+$('.modal-body').on('click', '.unreg', function (e) {
+    e.preventDefault();
+    var price = $(this).data('price'),
+        course_id = $(this).data('course_id');
+
+    $('.fade').hide();
+    $('.order-modal-unreg').arcticmodal();
+    // $.ajax({
+    //     url: '/order/add',
+    //     data: {
+    //         price: price,
+    //         course_id: course_id,
+    //     },
+    //     type: 'POST',
+    //     success: function(res){
+    //         $('.fade').hide();
+    //         showModal();
+    //     },
+    //     error: function () {
+    //         alert("Ошибка. Свяжитесь с нами по телефону.");
+    //     }
+    // });
+});
+
+$('.order-modal-unreg').on('click', '.close_modal', function (e) {
+    e.preventDefault();
+    $.arcticmodal('close');
+    location.reload();
+});
+
 
 
 // search

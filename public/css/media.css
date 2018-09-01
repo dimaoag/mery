@@ -19,7 +19,7 @@
 }
 @media all and (max-width: 900px){
     .wrapper{
-        overflow: auto;
+        overflow: hidden;
     }
     .content{
         width: 100%;

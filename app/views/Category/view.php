@@ -73,7 +73,7 @@
                 <div class="row">
                     <?php foreach ($courses_type as $course_type): ?>
                         <?php if ($course_type->kind_id == $course_kind->id): ?>
-                            <div class="col-lg-6 mt-3 mb-2">
+                            <div class="col-lg-6 mt-3 mb-2 unregistr">
                                 <h4 class="text-center programs-title mb-3 course-title"><?=h($course_type->name);?></h4>
 <!--                                <small class="text-secondary text-center w-100 d-block">-->
 <!--                                </small>-->
@@ -120,11 +120,19 @@
                                                                                     <td><?=h($course['sits']);?>/<?=h($course['limit_sits']);?></td>
                                                                                     <td class="table-item-delete"><?=h($course_type->price);?>грн</td>
                                                                                     <td>
-                                                                                        <a href="#" class="programs-show-all modal-btn btn <?php if (!isset($_SESSION['user']) || $course['sits'] >= $course['limit_sits']) echo 'disabled';?> add-order"
-                                                                                           data-price="<?=h($course_type->price);?>" data-course_id="<?=h($course['id']);?>">
-                                                                                            <i class="fa fa-plus-square disabled" aria-hidden="true"></i>
-                                                                                            <span class="modal-btn-text disabled">Бронировать</span>
-                                                                                        </a>
+                                                                                        <?php if (isset($_SESSION['user'])): ?>
+                                                                                            <a href="#" class="programs-show-all modal-btn btn <?php if ($course['sits'] >= $course['limit_sits']) echo 'disabled';?> add-order"
+                                                                                               data-price="<?=h($course_type->price);?>" data-course_id="<?=h($course['id']);?>">
+                                                                                                <i class="fa fa-plus-square disabled" aria-hidden="true"></i>
+                                                                                                <span class="modal-btn-text disabled">Бронировать</span>
+                                                                                            </a>
+                                                                                        <?php else: ?>
+                                                                                            <a href="#" class="programs-show-all modal-btn btn <?php if ($course['sits'] >= $course['limit_sits']) echo 'disabled';?> unreg"
+                                                                                               data-price="<?=h($course_type->price);?>" data-course_id="<?=h($course['id']);?>">
+                                                                                                <i class="fa fa-plus-square disabled" aria-hidden="true"></i>
+                                                                                                <span class="modal-btn-text disabled">Бронировать</span>
+                                                                                            </a>
+                                                                                        <?php endif; ?>
                                                                                     </td>
                                                                                 </tr>
                                                                                 <?php $i++?>
@@ -220,6 +228,24 @@
     <?php endif; ?>
 </div>
 
+<div class="art-modal-unreg" style="display: none">
+    <div class="container">
+        <div class="row">
+            <div class="box-modal col-12 order-modal-unreg w-100">
+                <div class="box_modal_close arcticmodal-close"></div>
+                <div>
+                    <h4>Спасибо</h4>
+                </div>
+                <div class="modal-footer center-wrap">
+                    <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn btn-outline-dark close_modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="art-modal" style="display: none">
     <div class="container">
         <div class="row">
@@ -235,3 +261,5 @@
         </div>
     </div>
 </div>
+
+

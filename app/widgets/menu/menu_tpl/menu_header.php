@@ -15,7 +15,7 @@
             </li>
         <?php else: ?>
             <li class="nav-item <?= ($key == 1) ? 'active' : '';?>">
-                <a class="nav-link" href="<?= ($key != 1) ? '/menu/'.h($value['alias']) : PATH;?>"><?= h($value['name']);?></a>
+                <a class="nav-link" href="<?= ($key != 1) ? h($value['alias']) : PATH;?>"><?= h($value['name']);?></a>
             </li>
         <?php endif; ?>
     <?php endforeach; ?>

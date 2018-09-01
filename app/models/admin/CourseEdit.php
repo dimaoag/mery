@@ -1,9 +1,11 @@
 <?php
+
 namespace app\models\admin;
+
 
 use app\models\AppModel;
 
-class Course extends AppModel {
+class CourseEdit extends AppModel {
 
     public $attributes = [
         'name' => '',
@@ -15,7 +17,6 @@ class Course extends AppModel {
         'type_id' => '',
         'status' => '',
         'limit_sits' => '',
-        'img' => '',
     ];
 
 
@@ -42,43 +43,6 @@ class Course extends AppModel {
         ],
 
     ];
-
-
-    public function getImg(){
-        if (!empty($_SESSION['course'])){
-            $this->attributes['img'] = $_SESSION['course'];
-            unset($_SESSION['course']);
-        }
-    }
-
-
-    public function uploadImg($name, $wmax, $hmax){
-        $uploaddir = WWW . '/upload/';
-        $ext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $_FILES[$name]['name'])); // расширение картинки
-        $types = array("image/gif", "image/png", "image/jpeg", "image/pjpeg", "image/x-png"); // массив допустимых расширений
-        if($_FILES[$name]['size'] > 1048576){
-            $res = array("error" => "Error! Max size of file - 1 Мб!");
-            exit(json_encode($res));
-        }
-        if($_FILES[$name]['error']){
-            $res = array("error" => "Error!. Maybe file's size very big!");
-            exit(json_encode($res));
-        }
-        if(!in_array($_FILES[$name]['type'], $types)){
-            $res = array("error" => "Enable extensions are:  .gif, .jpg, .png");
-            exit(json_encode($res));
-        }
-        $new_name = md5(time()).".$ext";
-        $uploadfile = $uploaddir.$new_name;
-        if(@move_uploaded_file($_FILES[$name]['tmp_name'], $uploadfile)){
-            if($name == 'course'){
-                $_SESSION['course'] = $new_name;
-            }
-            self::resize($uploadfile, $uploadfile, $wmax, $hmax, $ext);
-            $res = array("file" => $new_name);
-            exit(json_encode($res));
-        }
-    }
 
 
     public function editImg($id ,$name, $wmax, $hmax){
@@ -109,6 +73,7 @@ class Course extends AppModel {
             exit(json_encode($res));
         }
     }
+
 
     /**
      * @param string $target путь к оригинальному файлу
@@ -160,6 +125,7 @@ class Course extends AppModel {
         }
         imagedestroy($newImg);
     }
+
 
 
 }

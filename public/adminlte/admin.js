@@ -301,7 +301,11 @@ if ($('div').is('#course')){
 if (buttonCouse){
     new AjaxUpload(buttonCouse, {
         action: adminPath + buttonCouse.data('url') + "?upload=1",
-        data: {name: buttonCouse.data('name')},
+        data: {
+            name: buttonCouse.data('name'),
+            act: buttonProfile.data('act'),
+            id: buttonProfile.data('id')
+        },
         name: buttonCouse.data('name'), //параметр
         onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
             if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){

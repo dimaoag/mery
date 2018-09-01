@@ -166,8 +166,8 @@
                             <i class="fa fa-phone" aria-hidden="true"></i>
                         </div>
                         <div class="phones">
-                            <p>+3 8050 996 56 87</p>
-                            <p>+3 8050 996 56 87</p>
+                            <p><a href="tel:0509965687" style="color: white">+3 8050 996 56 87</a></p>
+                            <p><a href="tel:0509965687" style="color: white">+3 8050 996 56 87</a></p>
                         </div>
                     </div>
                 </div>

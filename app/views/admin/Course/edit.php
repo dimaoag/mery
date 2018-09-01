@@ -78,7 +78,7 @@
                                                 <h3 class="box-title">Мини фото курса</h3>
                                             </div>
                                             <div class="box-body">
-                                                <div id="course" class="btn btn-success" data-url="/course/add-image" data-name="course">
+                                                <div id="course" class="btn btn-success" data-url="/course/add-image" data-name="course" data-act="edit" data-id="<?=$course[0]['id'];?>">
                                                     Выберите изображение
                                                 </div>
                                                 <p>

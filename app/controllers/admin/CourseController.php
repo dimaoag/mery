@@ -3,6 +3,7 @@
 namespace app\controllers\admin;
 
 use app\models\admin\Course;
+use app\models\admin\CourseEdit;
 use mery\App;
 use mery\libs\Pagination;
 
@@ -48,11 +49,10 @@ class CourseController extends AdminController {
     public function editAction(){
         if (!empty($_POST)){
             $id = $this->getRequestId(false);
-            $course = new Course();
+            $course = new CourseEdit();
             $data = $_POST;
             $course->load($data);
             $course->attributes['status'] = 1;
-            $course->getImg();
             if (!$course->validate($data)){
                 $course->getErrors();
                 redirect();
@@ -118,8 +118,14 @@ class CourseController extends AdminController {
                 $wmax = App::$app->getProperty('course_with');
                 $hmax = App::$app->getProperty('course_height');
                 $name = $_POST['name'];
+                $act = $_POST['act'];
+                $id = $_POST['id'];
                 $course = new Course();
-                $course->uploadImg($name, $wmax, $hmax);
+                if ($act=='edit' && $id != '0'){
+                    $course->editImg($id,$name, $wmax, $hmax);
+                } else {
+                    $course->uploadImg($name, $wmax, $hmax);
+                }
             }
         }
     }

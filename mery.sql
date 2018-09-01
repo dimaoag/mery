@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Авг 31 2018 г., 15:06
+-- Время создания: Сен 01 2018 г., 07:47
 -- Версия сервера: 5.7.23-0ubuntu0.16.04.1
 -- Версия PHP: 7.0.31-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -126,11 +126,11 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`id`, `name`, `date_start`, `date_end`, `master_id`, `category_id`, `kind_id`, `type_id`, `status`, `sits`, `limit_sits`, `img`) VALUES
-(1, 'Как правильно наносить макияж', '2018-08-31', '2018-09-10', 1, 1, 1, 1, 1, 2, 3, 'beauty-care.png'),
+(1, 'Как правильно наносить макияж', '2018-09-03', '2018-09-10', 1, 1, 1, 1, 1, 2, 3, 'beauty-care.png'),
 (2, 'Как правильно наносить макияж 2', '2018-08-29', '2018-08-31', 1, 1, 1, 1, 1, 1, 3, 'beauty-care.png'),
 (3, 'Как правильно наносить макияж 3', '2018-08-30', '2018-08-31', 1, 1, 1, 2, 1, 1, 3, 'beauty-care.png'),
 (4, 'Как правильно наносить макияж 4', '2018-08-28', '2018-08-30', 1, 1, 1, 2, 1, 1, 3, 'beauty-care.png'),
-(7, 'Как правильно наносить макияж 7', '2018-08-28', '2018-08-18', 1, 1, 2, 4, 1, 0, 3, 'beauty-care.png'),
+(7, 'Как правильно наносить макияж 7', '2018-09-02', '2018-09-06', 1, 1, 2, 4, 1, 0, 3, 'beauty-care.png'),
 (8, 'Как правильно наносить макияж 8', '2018-08-27', '2018-08-18', 1, 1, 2, 4, 1, 0, 3, 'beauty-care.png');
 
 -- --------------------------------------------------------
@@ -528,12 +528,12 @@ ALTER TABLE `article`
 -- AUTO_INCREMENT для таблицы `carousel`
 --
 ALTER TABLE `carousel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT для таблицы `course`
 --
@@ -563,7 +563,7 @@ ALTER TABLE `course_user`
 -- AUTO_INCREMENT для таблицы `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT для таблицы `master`
 --

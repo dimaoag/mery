@@ -47,7 +47,7 @@
                             <div class="programs-date">
                                 <h4><?=echoDay($nearest_course['date_start']);?><br><span><?=echoMonth($nearest_course['date_start']);?></span></h4>
                             </div>
-                            <a href="#" class="programs-text">
+                            <a href="<?=PATH;?>/category/<?=$nearest_course['category_id'];?>" class="programs-text">
                                 <h5><b><?=h($nearest_course['name']);?></b></h5>
                                 <p>
                                     <small><?=dateFormat($nearest_course['date_start'], '.');?> - <?=dateFormat($nearest_course['date_end'], '.');?></small>

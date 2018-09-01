@@ -1,6 +1,7 @@
 <?php
 return [
-    'admin_email' => 'dimaoag@gmail.com',
+    'admin_email_from' => 'dimatest@gmail.com',
+    'admin_email_to' => 'dimaoag@gmail.com',
     'shop_name' => 'Meri&Meri',
     'turbo_sms_login' => 'hdfresh',
     'turbo_sms_password' => '232101',

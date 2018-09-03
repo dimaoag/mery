@@ -430,6 +430,76 @@ $('.del-img-car').on('click', function () {
 });
 
 
+//upload images
+if ($('div').is('#article')){
+    var buttonArticle = $('#article'),
+        file;
+}
+
+if (buttonArticle){
+    new AjaxUpload(buttonArticle, {
+        action: adminPath + buttonArticle.data('url') + "?upload=1",
+        data: {
+            name: buttonArticle.data('name'),
+            act: buttonArticle.data('act'),
+            id: buttonArticle.data('id')
+        },
+        name: buttonArticle.data('name'), //параметр
+        onSubmit: function(file, ext){ //при нажатии на кнопку выполняется функция (названия файла и его расширения)
+            if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
+                alert('Error! Allowed only images.');
+                return false;
+            }
+            buttonArticle.closest('.file-upload').find('.overlay').css({'display':'block'});
+            //первый предок (родитель с класом .file-upload) >  ищеи .find('.overlay') и показуем спинер
+
+        },
+        onComplete: function(file, response){ // по завершению аякс запроса
+            setTimeout(function(){ // чтобы лоадер (спинер) дольше покрутился
+                buttonArticle.closest('.file-upload').find('.overlay').css({'display':'none'});
+
+                response = JSON.parse(response);
+                $('.article').html('<img src="/upload/' + response.file + '" style="max-height: 100px;">');
+            }, 1000);
+        }
+    });
+}
+
+//delete images from  product
+$('.del-img-article').on('click', function () {
+    var res = confirm('Вы действительно хотите удалить фото?');
+    if (!res) return false;
+
+    var this_img = $(this),
+        id = this_img.data('id'),
+        src = this_img.data('src'),
+        type = this_img.data('type');
+
+    $.ajax({
+        url: adminPath + '/article/delete-image',
+        data: {id: id, src: src, type: type},
+        type: 'post',
+        beforeSend: function () {
+            this_img.closest('.file-upload').find('.overlay').css({'display': 'block'});
+        },
+        success: function (res) {
+            setTimeout(function () {
+                this_img.closest('.file-upload').find('.overlay').css({'display': 'none'});
+                if (res == 1){
+                    this_img.fadeOut();
+                }
+            }, 1000);
+        },
+        error: function () {
+            setTimeout(function () {
+                this_img.closest('.file-upload').find('.overlay').css({'display': 'none'});
+                alert('Error!')
+            }, 1000);
+        },
+    });
+
+});
+
 
 //create modification product
 var modList = [];

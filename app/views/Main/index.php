@@ -83,12 +83,12 @@
         <?php if (!empty($articles)): ?>
         <div class="row">
             <?php foreach ($articles as $article): ?>
-                <div class="col-md-4">
+                <div class="col-md-4 d-flex">
                     <div class="card">
                         <a href="<?=PATH;?>/article/view?id=<?=$article->id;?>">
                             <img class="card-img-top" src="upload/<?= h($article->img); ?>" alt="<?= h($article->img); ?>">
                         </a>
-                        <div class="card-body index-card-body">
+                        <div class="card-body index-card-body d-flex flex-column justify-content-between">
                             <h5 class="card-title index-card-title"><?= h($article->title); ?></h5>
                             <div class="cart-info d-flex justify-content-between">
                                 <p class="card-data"><?= echoDate($article->created_at); ?></p>

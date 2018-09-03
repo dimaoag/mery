@@ -527,9 +527,9 @@
 </html>
 
 <?php
-$logs = \R::getDatabaseAdapter()
-    ->getDatabase()
-    ->getLogger();
-
-debug( $logs->grep( 'SELECT' ) );
+//$logs = \R::getDatabaseAdapter()
+//    ->getDatabase()
+//    ->getLogger();
+//
+//debug( $logs->grep( 'SELECT' ) );
 //?>

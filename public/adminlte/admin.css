@@ -55,7 +55,7 @@ body{
 }
 
 
-.del-img, .del-img-course, .del-gallery, .del-img-car{
+.del-img, .del-img-course, .del-gallery, .del-img-car, .del-img-article{
     max-height: 150px !important;
     cursor: pointer !important;
 }

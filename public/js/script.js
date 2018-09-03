@@ -293,25 +293,33 @@ $('.order-modal').on('click', '.close_modal', function (e) {
 $('.modal-body').on('click', '.unreg', function (e) {
     e.preventDefault();
     var price = $(this).data('price'),
-        course_id = $(this).data('course_id');
+        course_id = $(this).data('course_id'),
+        course = $('.hidden-fields .course_id'),
+        price_field = $('.hidden-fields .price');
 
+    course.val(course_id);
+    price_field.val(price);
     $('.fade').hide();
     $('.order-modal-unreg').arcticmodal();
-    // $.ajax({
-    //     url: '/order/add',
-    //     data: {
-    //         price: price,
-    //         course_id: course_id,
-    //     },
-    //     type: 'POST',
-    //     success: function(res){
-    //         $('.fade').hide();
-    //         showModal();
-    //     },
-    //     error: function () {
-    //         alert("Ошибка. Свяжитесь с нами по телефону.");
-    //     }
-    // });
+
+    $('#form-unreg').on('submit', function (event) {
+        event.preventDefault();
+        var form_data = $(this).serialize();
+        $.ajax({
+            url: path + '/order/add-unreg',
+            method: 'POST',
+            data: form_data,
+            dataType: 'JSON',
+            success: function (data) {
+                if (data.error != ''){
+                    $.arcticmodal('close');
+                    showModal();
+                }
+            },
+        });
+    });
+
+
 });
 
 $('.order-modal-unreg').on('click', '.close_modal', function (e) {

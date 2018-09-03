@@ -231,14 +231,26 @@
 <div class="art-modal-unreg" style="display: none">
     <div class="container">
         <div class="row">
-            <div class="box-modal col-12 order-modal-unreg w-100">
+            <div class="box-modal order-modal-unreg w-100">
                 <div class="box_modal_close arcticmodal-close"></div>
-                <div>
-                    <h4>Спасибо</h4>
-                </div>
-                <div class="modal-footer center-wrap">
-                    <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn btn-outline-dark close_modal">Закрыть</button>
-                </div>
+                <form autocomplete="off" class="form-unreg" method="post" id="form-unreg">
+                    <div class="form-group">
+                        <label for="first_name">Имя</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input  class="form-control" data-mask="callback-catalog-phone" id="phone" type="text" name="phone" required>
+                    </div>
+                    <div class="hidden-fields">
+                        <input class="course_id" type="hidden" name="course_id" value="">
+                        <input class="price" type="hidden" name="price" value="">
+                    </div>
+                    <div class="modal-footer center-wrap">
+                        <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn btn-outline-dark close_modal">Отмена</button>
+                        <button type="submit" class="btn btn btn-outline-dark">Записаться</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

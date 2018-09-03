@@ -23,9 +23,7 @@
                         <div class="form-group has-feedback">
                             <label for="last_name">Фамилия</label>
                             <input type="text" class="form-control" name="last_name" id="last_name"
-                                   data-error="Minimum of 3 chars" data-minlength="3"
-                                   value="<?=$order['last_name'];?>"
-                                   required>
+                                   value="<?=$order['last_name'];?>">
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             <div class="help-block with-errors"></div>
                         </div>

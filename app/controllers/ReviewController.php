@@ -17,7 +17,7 @@ class ReviewController extends AppController {
             $data = $_POST;
             if ($error == ''){
                 $data['user_id'] = $_SESSION['user']['id'];
-                $data['status'] = 1;
+                $data['status'] = 0;
                 $review->load($data);
                 if (!$review->validate($data)){
                     $review->getErrors();
@@ -39,7 +39,7 @@ class ReviewController extends AppController {
 
     public function loadAction(){
         if ($this->isAjax()){
-            $reviews = \R::getAll("SELECT review.*, user.first_name, user.last_name, user.photo_origin, user.photo_profile FROM review JOIN user ON review.user_id = user.id WHERE review.status = 1 ORDER BY review.created_at DESC LIMIT 10");
+            $reviews = \R::getAll("SELECT review.*, user.first_name, user.last_name, user.photo_origin, user.photo_profile FROM review JOIN user ON review.user_id = user.id  ORDER BY review.created_at DESC LIMIT 5");
             require_once APP . '/views/Review/reviews.php';
         }
     }

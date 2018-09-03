@@ -20,11 +20,11 @@
                             <ul class="login-more p-t-90">
                                 <li class="m-b-8">
                                     <span class="txt1">Восстановить </span>
-                                    <a href="#" class="txt2">пароль</a>
+                                    <a href="<?=PATH;?>/user/recovery" class="txt2">пароль</a>
                                 </li>
                                 <li>
                                     <span class="txt1">Если у вас нет акаунта</span>
-                                    <a href="#" class="txt2">зарегистрируйтесь</a>
+                                    <a href="<?=PATH;?>/user/registration" class="txt2">зарегистрируйтесь</a>
                                 </li>
                             </ul>
                         </form>

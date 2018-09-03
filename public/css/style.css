@@ -64,6 +64,7 @@ input[type=text], textarea {outline:none;}
     flex-wrap: nowrap;
     margin-top: 25px;
     margin-bottom: 25px;
+    min-height: 81vh;
 }
 .left-sidebar{
     position: relative;

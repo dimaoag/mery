@@ -80,6 +80,26 @@ class UserController extends AppController {
     }
 
 
+    public function recoveryAction(){
+        if (!empty($_POST)){
+            $phone = $_POST['phone'] ? h($_POST['phone']) : null;
+            $phone = str_replace(" ", "", $phone);
+            $user = \R::findOne('user', 'phone = ?',[$phone]);
+            if (!$user || !$phone){
+                $_SESSION['errors'] = 'Ошибка! Указанный телефон не существует в базе!';
+                redirect();
+            }
+            $turboSMS = new TurboSMS();
+            if ($turboSMS->send($phone, base64_decode($user->password))){
+                redirect(PATH.'/user/login');
+            }
+        }
+        $this->setMeta('Восстановления пароля');
+    }
+
+
+
+
     public function uploadPhotoAction(){
         function str_random($length){
             return substr(md5(microtime()),0,$length);

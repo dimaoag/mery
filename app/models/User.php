@@ -38,7 +38,8 @@ class User extends AppModel {
 
 
     public function hashPassword(){
-        $this->attributes['password'] = password_hash($this->attributes['password'], PASSWORD_DEFAULT);
+        $this->attributes['password'] = base64_encode($this->attributes['password']);
+//        $this->attributes['password'] = password_hash($this->attributes['password'], PASSWORD_DEFAULT);
     }
 
 
@@ -73,7 +74,7 @@ class User extends AppModel {
                 $user = \R::findOne('user', "phone = ? AND active = 1", [$phone]);
             }
             if ($user){
-                if (password_verify($password, $user->password)){
+                if (base64_encode($password) == $user->password){
                     foreach ($user as $key => $value){
                         if ($key != 'password'){
                             $_SESSION['user'][$key] = $value;

@@ -73,15 +73,39 @@ if ($("div").is(".owl-carousel-nearest-courses")){
 
 
 // carousel video course page
-if ($("div").is(".carousel-video")){
-    $(document).ready(function() {
-        $("#carousel").waterwheelCarousel({
-            // speed: 1000,
-            startingItem: 3,
-            // autoPlay: 1,
-        });
+$(document).ready(function(){
+    $('.glide').slick({
+        infinite: false,
+        dots:false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
     });
-}
+});
 
 //upload image profile
 $(document).ready(function ($) {
@@ -254,7 +278,7 @@ $(document).ready(function () {
 });
 
 //add products to cart
-$('.modal-body').on('click', '.add-order', function (e) {
+$('.modal-body').on('click', '.art-modal-thanks', function (e) {
     e.preventDefault();
     var price = $(this).data('price'),
         course_id = $(this).data('course_id');
@@ -355,3 +379,5 @@ $('#typeahead').bind('typeahead:select', function (ev, suggestion) {
     //console.log(suggestion);
     window.location = path + '/search/?s=' + encodeURIComponent(suggestion.id);
 });
+
+$(".js-modal-btn").modalVideo();

@@ -14,7 +14,12 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/croppie.css">
     <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
-    <link rel="stylesheet" href="css/themes/simple.css">
+    <link rel="stylesheet" href="css/modal-video.min.css">
+
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
 
     <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
     <!--===============================================================================================-->
@@ -218,6 +223,10 @@
 <script src="js/jquery.waterwheelCarousel.min.js"></script>
 
 <script src="js/typeahead.bundle.js"></script>
+
+<script src="js/jquery-modal-video.min.js"></script>
+
+<script src="js/slick.min.js"></script>
 
 <script src="js/main.js"></script>
 

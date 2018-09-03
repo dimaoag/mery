@@ -216,30 +216,33 @@
     <?php if (!empty($video_reviews)): ?>
         <div class="row">
             <div class="col-12">
-                <div id="carousel" class="carousel-video">
+                <div class="glide">
                     <?php foreach ($video_reviews as $video_review):?>
-                        <a href="#">
+                        <a href="#" class="js-modal-btn mx-3" data-video-id="<?=h($video_review->url);?>">
                             <img src="https://i.ytimg.com/vi/<?=h($video_review->url);?>/hqdefault.jpg" alt="<?=h($video_review->url);?>" />
                         </a>
                     <?php endforeach; ?>
+
                 </div>
             </div>
         </div>
     <?php endif; ?>
-</div>
 
-<div class="art-modal-unreg" style="display: none">
+<div class="art-modal art-modal-unreg" style="display: none">
     <div class="container">
         <div class="row">
             <div class="box-modal order-modal-unreg w-100">
                 <div class="box_modal_close arcticmodal-close"></div>
+                <div class="col-12">
+                    <h1 style="color: #6d5b97">Введите данные для отправки формы</h1>
+                </div>
                 <form autocomplete="off" class="form-unreg" method="post" id="form-unreg">
                     <div class="form-group">
-                        <label for="first_name">Имя</label>
+                        <label for="first_name" style="color: #6d5b97">Имя</label>
                         <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Введите ваше имя" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Телефон</label>
+                        <label for="phone" style="color: #6d5b97">Телефон</label>
                         <input  class="form-control" data-mask="callback-catalog-phone" id="phone" type="text" name="phone" required>
                     </div>
                     <div class="hidden-fields">
@@ -247,8 +250,8 @@
                         <input class="price" type="hidden" name="price" value="">
                     </div>
                     <div class="modal-footer center-wrap">
-                        <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn btn-outline-dark close_modal">Отмена</button>
-                        <button type="submit" class="btn btn btn-outline-dark">Записаться</button>
+                        <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn close_modal programs-show-all modal-btn course-btn">Отмена</button>
+                        <button type="submit" class="btn programs-show-all modal-btn course-btn">Записаться</button>
                     </div>
                 </form>
             </div>
@@ -258,7 +261,7 @@
 
 
 
-<div class="art-modal" style="display: none">
+<div class="art-modal art-modal-thanks" style="display: none">
     <div class="container">
         <div class="row">
             <div class="box-modal col-12 order-modal w-100">

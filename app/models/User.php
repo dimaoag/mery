@@ -11,7 +11,6 @@ class User extends AppModel {
         'phone' => '',
         'email' => '',
         'password' => '',
-        'photo_origin' => '',
         'photo_profile' => '',
         'role' => 'user',
     ];
@@ -22,7 +21,6 @@ class User extends AppModel {
             ['first_name'],
             ['last_name'],
             ['phone'],
-            ['password'],
         ],
         'email' => [
             ['email']
@@ -30,7 +28,6 @@ class User extends AppModel {
         'lengthMin' => [
             ['first_name', 4],
             ['last_name', 3],
-            ['password', 4],
         ],
 
     ];

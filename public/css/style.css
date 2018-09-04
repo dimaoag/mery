@@ -855,3 +855,59 @@ span.twitter-typeahead {
 }
 
 /*article*/
+
+/*unget form*/
+.order-modal-unreg{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+/*cabinet*/
+.cabinet-welcome{
+    white-space: normal;
+    font-size: 2rem;
+}
+
+.user-image-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.user-image {
+    display: flex;
+    justify-content: center;
+}
+.user-image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.form-control:focus {
+    /*border-color: rgba(0,0,0, 0.8);*/
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.01) inset, 0 0 1px rgba(0,0,0, 0.6);*/
+    outline: none;!important;
+}
+
+.profile-modal-photo-cabinet{
+    background-color: white;
+}
+
+/*cabinet*/

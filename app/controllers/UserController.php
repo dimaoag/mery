@@ -12,8 +12,7 @@ class UserController extends AppController {
         if (!empty($_POST)){
             $user = new User();
             $data = $_POST;
-            if (empty($data['photo_origin'])){
-                $data['photo_origin'] = 'no_avatar.jpg';
+            if (empty($data['photo_profile'])){
                 $data['photo_profile'] = 'no_avatar.jpg';
             }
             $data['phone'] = str_replace(" ", "", $data['phone']);
@@ -55,7 +54,7 @@ class UserController extends AppController {
         if (!empty($_POST)){
             $user = new User();
             if ($user->login()){
-                redirect(PATH);
+                redirect(PATH . '/user/cabinet');
             } else {
                 $_SESSION['errors'] = 'Ошибка!. Телефон или пароль неверны!';
             }
@@ -77,6 +76,44 @@ class UserController extends AppController {
             unset($_SESSION['success']);
         }
         redirect(PATH);
+    }
+
+    public function cabinetAction(){
+        if (!User::isAuth()){
+            redirect(PATH);
+        }
+        if (!empty($_POST)){
+            $id = (int)$_POST['id'];
+            $user = new User();
+            $data = $_POST;
+            $user->load($data);
+            unset($user->attributes['role']);
+            unset($user->attributes['photo_profile']);
+            if (!$user->attributes['password']){
+                unset($user->attributes['password']);
+            } else {
+                if ($user->attributes['password'] != $data['password_confirm']){
+                    $_SESSION['errors'] = 'Введеные пароли не совпадают!';
+                    redirect();
+                }
+                $user->attributes['password'] = base64_encode($user->attributes['password']);
+            }
+            if (!$user->validate($data)){
+                $user->getErrors();
+                redirect();
+            }
+            if ($user->update('user', $id)){
+                $_SESSION['success'] = 'Сохранено!';
+            }
+            redirect();
+        }
+
+        $user = \R::findOne('user', 'id = ?',[$_SESSION['user']['id']]);
+        $courses = \R::getAll("SELECT course_order.*, course.name, course.date_start, course.date_end, course.category_id FROM course_order JOIN course ON course_order.course_id = course.id WHERE course_order.phone = ? AND course.date_start >= CURDATE() ORDER BY course.date_start ASC",[$user->phone]);
+        $nearest_courses = \R::getAll("SELECT * FROM course WHERE date_start >= CURDATE() ORDER BY date_start ASC LIMIT 6");
+
+        $this->setMeta('Кабинет пользователя');
+        $this->setData(compact('user', 'courses', 'nearest_courses'));
     }
 
 
@@ -136,9 +173,54 @@ class UserController extends AppController {
                 $arr['status'] = 'fail';
             }
         }
-
         header('Content-type: application/json');
         echo json_encode($arr);
         die();
     }
+
+    public function editPhotoAction(){
+        function str_random($length){
+            return substr(md5(microtime()),0,$length);
+        }
+        $uploaddir = 'upload/';
+        if (isset($_POST['photo'])){
+            $arr = [];
+            $str = str_random(8);
+            if ($_POST['photo']){
+                $file = 'uploaded_photo'.$str.'_min.png';
+                $save_file = $file;
+                $uploadfile = $uploaddir . $file;
+                $img = str_replace('data:image/png;base64,', '', $_POST['photo']);
+                $img = str_replace(' ', '+', $img);
+                $fileData = base64_decode($img);
+                $url = $uploadfile;
+                file_put_contents($url,$fileData);
+                $arr['status'] = 'success';
+                $arr['path_mini'] = PATH . '/' .  $uploadfile;
+                $arr['file_mini'] = $file;
+
+                $user= \R::load('user', $_SESSION['user']['id']);
+                $user->photo_profile = $save_file;
+                \R::store($user);
+                //save in db
+            }
+        } else {
+            $uploadfile = $uploaddir . basename($_FILES['file']['name']);
+            $arr = [];
+            //crop
+            if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)){
+                debug($_FILES,1);
+                $arr['status'] = 'success';
+                $arr['path_max'] = PATH . '/' .  $uploadfile;
+                $arr['file_max'] = $_FILES['file']['name'];
+            } else {
+                $arr['status'] = 'fail';
+            }
+        }
+        header('Content-type: application/json');
+        echo json_encode($arr);
+        die();
+    }
+
+
 }

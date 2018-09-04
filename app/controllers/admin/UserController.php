@@ -52,7 +52,7 @@ class UserController extends AdminController {
             if (!$user->attributes['password']){
                 unset($user->attributes['password']);
             } else {
-                $user->attributes['password'] = password_hash($user->attributes['password'], PASSWORD_DEFAULT);
+                $user->attributes['password'] = base64_encode($user->attributes['password']);
             }
             if (!$user->validate($data) || !$user->isUnique()){
                 $user->getErrors();

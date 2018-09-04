@@ -159,25 +159,24 @@
             <?php endif; ?>
         <?php endforeach; ?>
     <?php endif; ?>
-
-    <div class="row">
-        <div class="col-12">
-            <div class="horizontal-line">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="horizontal-line-left"></div>
-                    </div>
-                    <div class="col-4">
-                        <div class="horizontal-line-text horizontal-line-text-md">ближайшие курсы</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="horizontal-line-right"></div>
+    <?php if (!empty($nearest_courses)): ?>
+        <div class="row">
+            <div class="col-12">
+                <div class="horizontal-line">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="horizontal-line-left"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="horizontal-line-text horizontal-line-text-md">ближайшие курсы</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="horizontal-line-right"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <?php if (!empty($nearest_courses)): ?>
         <div class="row mb-4">
             <div class="col-12 carousel-course">
                 <div class="owl-carousel-nearest-courses owl-carousel" id="nearest">
@@ -194,26 +193,26 @@
             </div>
         </div>
     <?php endif; ?>
-    <div class="video-carousel">
-        <div class="row">
-            <div class="col-12">
-                <div class="horizontal-line">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="horizontal-line-left"></div>
-                        </div>
-                        <div class="col-4">
-                            <div class="horizontal-line-text horizontal-line-text-md">Видеоотзывы</div>
-                        </div>
-                        <div class="col-4">
-                            <div class="horizontal-line-right"></div>
+    <?php if (!empty($video_reviews)): ?>
+        <div class="video-carousel">
+            <div class="row">
+                <div class="col-12">
+                    <div class="horizontal-line">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="horizontal-line-left"></div>
+                            </div>
+                            <div class="col-4">
+                                <div class="horizontal-line-text horizontal-line-text-md">Видеоотзывы</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="horizontal-line-right"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <?php if (!empty($video_reviews)): ?>
         <div class="row">
             <div class="col-12">
                 <div class="glide">
@@ -222,7 +221,6 @@
                             <img src="https://i.ytimg.com/vi/<?=h($video_review->url);?>/hqdefault.jpg" alt="<?=h($video_review->url);?>" />
                         </a>
                     <?php endforeach; ?>
-
                 </div>
             </div>
         </div>
@@ -234,7 +232,7 @@
             <div class="box-modal order-modal-unreg w-100">
                 <div class="box_modal_close arcticmodal-close"></div>
                 <div class="col-12">
-                    <h1 style="color: #6d5b97">Введите данные для отправки формы</h1>
+                    <h3 style="color: #6d5b97">Введите данные для отправки формы</h3>
                 </div>
                 <form autocomplete="off" class="form-unreg" method="post" id="form-unreg">
                     <div class="form-group">

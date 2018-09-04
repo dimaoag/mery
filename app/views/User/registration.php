@@ -29,8 +29,8 @@
                             <div class="m-b-50  reg-upload-photo">
                                 <a href="#" class="add-photo">Загрузить фото</a>
                                 <input type="file" id="c_input_24" name="file" multiple="false" style="display: none">
-                                <input type="hidden" id="c_input_24" name="photo_origin" multiple="false" value="" style="display: none">
-                                <input type="hidden" id="c_input_24" name="photo_profile" multiple="false" value="" style="display: none">
+                                <input type="hidden"  name="photo_origin" multiple="false" value="" style="display: none">
+                                <input type="hidden"  name="photo_profile" multiple="false" value="" style="display: none">
                             </div>
                             <div class="perscab-photoedit-img mb-2 reg-upload-photo">
                                 <img src="#" alt="">
@@ -49,7 +49,7 @@
                         <img class="profile_photo_i" src="#" alt="">
                     </div>
                     <div class="modal-footer center-wrap">
-                        <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn btn-outline-dark js-main-image">Сохранить</button>
+                        <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn btn-outline-dark js-main-image-registration">Сохранить</button>
                     </div>
                 </div>
             </div>

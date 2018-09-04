@@ -123,4 +123,9 @@
     .reg-upload-photo{
         display: none;
     }
+    .user-image img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+    }
 }

@@ -323,7 +323,7 @@ $(document).ready(function () {
 });
 
 //add products to cart
-$('.modal-body').on('click', '.art-modal-thanks', function (e) {
+$('.modal-body').on('click', '.add-order', function (e) {
     e.preventDefault();
     var price = $(this).data('price'),
         course_id = $(this).data('course_id');

@@ -264,11 +264,11 @@
         <div class="row">
             <div class="box-modal col-12 order-modal w-100">
                 <div class="box_modal_close arcticmodal-close"></div>
-                <div>
+                <div class="">
                     <h4>Спасибо за Ваш заказ. Наш менеджер в ближайшее время свяжится с вами.</h4>
                 </div>
                 <div class="modal-footer center-wrap">
-                    <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover btn btn-outline-dark close_modal">Закрыть</button>
+                    <button class="reg-btn reg-btn_empty reg-btn_empty-wth reg-btn_blk-hover programs-show-all modal-btn btn close_modal w-25">Закрыть</button>
                 </div>
             </div>
         </div>

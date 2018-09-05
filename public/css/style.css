@@ -862,6 +862,9 @@ span.twitter-typeahead {
     padding: 10px 20px;
     border-radius: 15px;
 }
+.order-modal{
+    background-color: white;
+}
 
 /*cabinet*/
 .cabinet-welcome{

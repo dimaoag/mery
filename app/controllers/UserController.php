@@ -54,7 +54,7 @@ class UserController extends AppController {
         if (!empty($_POST)){
             $user = new User();
             if ($user->login()){
-                redirect(PATH . '/user/cabinet');
+                redirect(PATH );
             } else {
                 $_SESSION['errors'] = 'Ошибка!. Телефон или пароль неверны!';
             }

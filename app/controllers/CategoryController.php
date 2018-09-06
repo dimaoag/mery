@@ -19,6 +19,8 @@ class CategoryController extends AppController {
         $courses_kind = \R::findAll('course_kind', 'category_id = ?', [$category->id]);
         //course_type (базовый или полный)
         $courses_type = \R::findAll('course_type', 'category_id = ?', [$category->id]);
+
+
         //courses
         $courses = \R::getAll("SELECT course.*, master.first_name, master.last_name FROM course JOIN master ON course.master_id = master.id WHERE course.category_id = $category->id AND date_start >= CURDATE() ORDER BY date_start ASC");
         //nearest_courses

@@ -35,8 +35,8 @@
                         <!--<a href="#" class="programs-show-all mt-3 mb-3 w-75 align-self-center">Бронировать</a>-->
                     </div>
                     <div class="col-xl-6 video-wrapper d-flex flex-column justify-content-center my-5">
-                        <a href="https://www.youtube.com/embed/<?=$master->video;?>-XI?autoplay=1" class="b-video js-iframe" id="js-iframe">
-                            <img src="http://img.youtube.com/vi/<?=$master->video;?>-XI/maxresdefault.jpg" alt="" />
+                        <a href="#" class="b-video js-modal-btn" data-video-id="<?=h($master->video);?>" onclick="return false">
+                            <img src="https://i.ytimg.com/vi/<?=$master->video;?>/sddefault.jpg" alt="" />
                             <div class="b-play">
                                 <!--<svg class="svg" width="21" height="29"><use xlink:href="./images/sprite.svg#play"></use></svg>-->
                                 <img class="svg" src="images/play_pn.png">

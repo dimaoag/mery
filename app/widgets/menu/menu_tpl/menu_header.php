@@ -6,6 +6,7 @@
                     <?= h($value['name']);?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown<?=$key?>">
+                    <a class="dropdown-item" href="/courses">Все курсы</a>
                     <?php foreach ($this->categories as $cat_id => $cat_value): ?>
                         <?php if ($cat_value['menu_id'] == $key): ?>
                             <a class="dropdown-item" href="/category/<?= h($cat_id);?>"><?= h($cat_value['name']);?></a>

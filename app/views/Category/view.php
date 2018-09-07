@@ -73,7 +73,7 @@
                 <div class="row">
                     <?php foreach ($courses_type as $course_type): ?>
                         <?php if ($course_type->kind_id == $course_kind->id): ?>
-                            <div class="col-lg-6 mt-3 mb-2 unregistr">
+                            <div class="col-lg-<?= ($count[$course_kind->id] > 1) ? '6' : '12' ;?> mt-3 mb-2 unregistr">
                                 <h4 class="text-center programs-title mb-3 course-title"><?=h($course_type->name);?></h4>
 <!--                                <small class="text-secondary text-center w-100 d-block">-->
 <!--                                </small>-->

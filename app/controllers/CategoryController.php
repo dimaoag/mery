@@ -20,6 +20,14 @@ class CategoryController extends AppController {
         //course_type (базовый или полный)
         $courses_type = \R::findAll('course_type', 'category_id = ?', [$category->id]);
 
+        $count = [];
+        foreach ($courses_kind as $key => $course_kind){
+            foreach ($courses_type as $k => $course_type){
+                if ($course_type['kind_id'] == $course_kind['id']){
+                    $count[$course_kind['id']] += 1;
+                }
+            }
+        }
 
         //courses
         $courses = \R::getAll("SELECT course.*, master.first_name, master.last_name FROM course JOIN master ON course.master_id = master.id WHERE course.category_id = $category->id AND date_start >= CURDATE() ORDER BY date_start ASC");
@@ -32,7 +40,7 @@ class CategoryController extends AppController {
 
 
         $this->setMeta($category->name);
-        $this->setData(compact('category', 'gallery', 'masters', 'courses_kind', 'courses_type', 'courses', 'nearest_courses', 'video_reviews'));
+        $this->setData(compact('category', 'gallery', 'masters', 'courses_kind', 'courses_type', 'courses', 'nearest_courses', 'video_reviews', 'count'));
     }
 
 }

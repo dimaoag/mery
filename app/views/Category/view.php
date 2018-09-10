@@ -1,17 +1,17 @@
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 mb-5">
             <div class="course-banner">
                 <img src="upload/<?=h($category->banner);?>" alt="course-banner">
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 text-center mt-3 mb-4">
-            <h4 class="programs-title rob-nash-title">Работы наших учениц после окончания курса</h4>
-        </div>
-    </div>
     <?php if (!empty($gallery)): ?>
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h4 class="programs-title rob-nash-title">Работы наших учениц после окончания курса</h4>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12 carousel-course">
                 <div class="owl-carousel owl-carousel-course">

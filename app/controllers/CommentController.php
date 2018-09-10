@@ -40,7 +40,7 @@ class CommentController extends AppController {
 
     public function loadAction(){
         if ($this->isAjax()){
-            $comments = \R::getAll("SELECT comment.*, user.first_name, user.last_name, user.photo_origin, user.photo_profile FROM comment JOIN user ON comment.user_id = user.id WHERE comment.status = 1 AND comment.article_id = ? ORDER BY comment.created_at DESC LIMIT 10", [$_SESSION['article_id']]);
+            $comments = \R::getAll("SELECT comment.*, user.first_name, user.last_name, user.photo_profile FROM comment JOIN user ON comment.user_id = user.id WHERE comment.status = 1 AND comment.article_id = ? ORDER BY comment.created_at DESC LIMIT 10", [$_SESSION['article_id']]);
             require_once APP . '/views/Comment/show.php';
         }
     }

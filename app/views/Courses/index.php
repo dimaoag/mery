@@ -2,7 +2,7 @@
     <div class="row courses-banner">
         <div class="col-12">
             <div class="courses-logo">
-                <img src="./images/courses_logo.png" alt="courser-logo">
+                <img src="./images/courses.JPG" alt="courser-logo">
 <!--                <img src="images/IMG_7992.JPG" alt="courser-logo" style="height: 600px">-->
             </div>
         </div>

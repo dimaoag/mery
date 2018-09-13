@@ -460,6 +460,9 @@ article{
 
 
 /* --------------- course ---------*/
+.course-banner img {
+    width: 100%;
+}
 .coursers-card{
     margin: 10px 0 10px 0;
 }

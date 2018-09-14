@@ -39,7 +39,7 @@
                             <img src="https://i.ytimg.com/vi/<?=$master->video;?>/maxresdefault.jpg" alt="" />
                             <div class="b-play">
                                 <!--<svg class="svg" width="21" height="29"><use xlink:href="./images/sprite.svg#play"></use></svg>-->
-                                <img class="svg" src="images/play_pn.png">
+                                <img class="svg" src="images/play_pn_col.png">
                             </div>
                         </a>
                     </div>

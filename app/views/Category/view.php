@@ -36,7 +36,7 @@
                     </div>
                     <div class="col-xl-6 video-wrapper d-flex flex-column justify-content-center my-5">
                         <a href="#" class="b-video js-modal-btn" data-video-id="<?=h($master->video);?>" onclick="return false">
-                            <img src="https://i.ytimg.com/vi/<?=$master->video;?>/sddefault.jpg" alt="" />
+                            <img src="https://i.ytimg.com/vi/<?=$master->video;?>/maxresdefault.jpg" alt="" />
                             <div class="b-play">
                                 <!--<svg class="svg" width="21" height="29"><use xlink:href="./images/sprite.svg#play"></use></svg>-->
                                 <img class="svg" src="images/play_pn.png">
@@ -218,7 +218,7 @@
                 <div class="glide">
                     <?php foreach ($video_reviews as $video_review):?>
                         <a href="#" class="js-modal-btn mx-3" data-video-id="<?=h($video_review->url);?>">
-                            <img src="https://i.ytimg.com/vi/<?=h($video_review->url);?>/hqdefault.jpg" alt="<?=h($video_review->url);?>" />
+                            <img src="https://i.ytimg.com/vi/<?=h($video_review->url);?>/maxresdefault.jpg" alt="<?=h($video_review->url);?>" />
                         </a>
                     <?php endforeach; ?>
                 </div>

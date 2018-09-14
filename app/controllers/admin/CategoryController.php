@@ -174,9 +174,7 @@ class CategoryController extends AdminController {
 
 
     public function videoReviewAddAction(){
-
         if (!empty($_POST)) {
-            debug($_POST);
             $id = (int)$this->getRequestId(false);
             $url = h($_POST['url']);
             $is_show = (int)$_POST['status'];

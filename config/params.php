@@ -1,7 +1,7 @@
 <?php
 return [
-    'admin_email_from' => 'dimatest@gmail.com',
-    'admin_email_to' => 'dimaoag@gmail.com',
+    'admin_email_from' => 'salon.meri.meri@gmail.com',
+    'admin_email_to' => 'salon.meri.meri@gmail.com',
     'shop_name' => 'Meri&Meri',
     'turbo_sms_login' => 'hdfresh',
     'turbo_sms_password' => '232101',

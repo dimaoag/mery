@@ -100,51 +100,51 @@
         </div>
         <?php endif; ?>
     </article>
-    <div class="horizontal-line">
-        <div class="row">
-            <div class="col-4">
-                <div class="horizontal-line-left"></div>
-            </div>
-            <div class="col-4">
-                <div class="horizontal-line-text horizontal-line-text-md">Видеоуроки</div>
-            </div>
-            <div class="col-4">
-                <div class="horizontal-line-right"></div>
-            </div>
-        </div>
-    </div>
-    <article>
-        <?php if (!empty($videos)): ?>
-            <div class="row">
-                <?php foreach ($videos as $video): ?>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <a href="/category/<?= h($video->category_id);?>">
-                                <img src="https://i.ytimg.com/vi/<?= h($video->url);?>/hqdefault.jpg" alt="<?= h($video->url);?>" />
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title"><?= h($video->title);?></h5>
-                                <div class="cart-info d-flex justify-content-between">
-                                    <p class="card-data"><?= echoDate($video->created_at); ?></p>
-                                    <div>
-                                        <i class="fa fa-comment"></i> <?= h($video->comments);?>
-                                        <i class="fa fa-heart"></i> <?= h($video->likes);?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
-        <div class="row">
-            <div class="col-12 text-center">
-                <a href="/videos/">
-                    <h5 class="all-video">Все видеоуроки</h5>
-                </a>
-            </div>
-        </div>
-    </article>
+<!--    <div class="horizontal-line">-->
+<!--        <div class="row">-->
+<!--            <div class="col-4">-->
+<!--                <div class="horizontal-line-left"></div>-->
+<!--            </div>-->
+<!--            <div class="col-4">-->
+<!--                <div class="horizontal-line-text horizontal-line-text-md">Видеоуроки</div>-->
+<!--            </div>-->
+<!--            <div class="col-4">-->
+<!--                <div class="horizontal-line-right"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <article>-->
+<!--        --><?php //if (!empty($videos)): ?>
+<!--            <div class="row">-->
+<!--                --><?php //foreach ($videos as $video): ?>
+<!--                    <div class="col-md-4">-->
+<!--                        <div class="card">-->
+<!--                            <a href="/category/--><?php//= h($video->category_id);?><!--">-->
+<!--                                <img src="https://i.ytimg.com/vi/--><?php//= h($video->url);?><!--/hqdefault.jpg" alt="--><?php//= h($video->url);?><!--" />-->
+<!--                            </a>-->
+<!--                            <div class="card-body">-->
+<!--                                <h5 class="card-title">--><?php//= h($video->title);?><!--</h5>-->
+<!--                                <div class="cart-info d-flex justify-content-between">-->
+<!--                                    <p class="card-data">--><?php//= echoDate($video->created_at); ?><!--</p>-->
+<!--                                    <div>-->
+<!--                                        <i class="fa fa-comment"></i> --><?php//= h($video->comments);?>
+<!--                                        <i class="fa fa-heart"></i> --><?php//= h($video->likes);?>
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                --><?php //endforeach; ?>
+<!--            </div>-->
+<!--        --><?php //endif; ?>
+<!--        <div class="row">-->
+<!--            <div class="col-12 text-center">-->
+<!--                <a href="/videos/">-->
+<!--                    <h5 class="all-video">Все видеоуроки</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </article>-->
     <div class="horizontal-line">
         <div class="row">
             <div class="col-4">

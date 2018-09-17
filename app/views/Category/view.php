@@ -181,11 +181,13 @@
             <div class="col-12 carousel-course">
                 <div class="owl-carousel-nearest-courses owl-carousel" id="nearest">
                     <?php foreach ($nearest_courses as $nearest_course):?>
-                        <div class="nearest">
+                        <div class="nearest d-flex flex-column">
                             <div class="nearest-img">
-                                <img src="upload/<?=h($nearest_course['img']);?>" alt="image">
+                                <a href="<?=PATH?>/category/<?=h($nearest_course['category_id']);?>">
+                                    <img src="upload/<?=h($nearest_course['img']);?>" alt="image">
+                                </a>
                             </div>
-                            <h4 class="nearest-title"><?=h($nearest_course['name']);?></h4>
+                            <h4 class="nearest-title flex-grow-1"><?=h($nearest_course['name']);?></h4>
                             <small class="text-right d-block"><?=h(dateFormat($nearest_course['date_start']));?></small>
                         </div>
                     <?php endforeach; ?>

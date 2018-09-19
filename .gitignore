@@ -6,4 +6,5 @@ vendor/*
 Vagrantfile
 provision.sh
 composer.lock
+set.txt
 
